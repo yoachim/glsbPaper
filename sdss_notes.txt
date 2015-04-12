@@ -1,0 +1,37 @@
+looking for stellar masses in SDSS:
+
+malin2
+bestObjID	specobjid	lgm_tot_p50	lgm_tot_p16	lgm_tot_p84
+1237667735572381852	2790087515153917952	11.153968	11.067619	11.232555
+
+ugc6614
+bestObjID	specobjid	lgm_tot_p50	lgm_tot_p16	lgm_tot_p84
+1237668585435365393	2823833172553263104	10.656975	10.566743	10.739796
+
+select top 10 s.bestObjID, g.specobjid, g.lgm_tot_p50,lgm_tot_p16,lgm_tot_p84
+from galSpecExtra as g, SpecObjAll as s
+where g.specobjid = s.specobjid and
+--s.ra between 174.81196128-0.000185 and 174.81196128+0.000185 and
+--s.dec between 17.14365087-0.00277 and 17.14365087+0.00277 
+s.ra between 159.96865578-0.000185 and 159.96865578+0.000185 and
+s.dec between 20.84704142-0.00277 and 20.84704142+0.00277 
+
+--where (specobjid = 2790087515153917952 or specobjid = 1237668585435365393)
+--malin2 = np.where(data['objid'] == 1237667735572381852)
+--ugc6614 = np.where(data['objid'] == 1237668585435365393)
+--s.bestObjID = 1237668585435365393 or s.bestObjID = 1237667735572381852
+
+
+Let's see, 
+Malin 2 looks like 300 km/s at 60" = 56 kpc
+v^2 = GM/r, M = v^2r/G = 1.2e12 solar masses?!?
+(300.e5)**2*56e3*3.1e18/6.67e-8/2e33/1e12
+
+UGC:  ~250 km/s at 45" = 19 kpc
+M = 2.7e11 solar masses
+
+http://www-astro.physics.ox.ac.uk/~dxk/idl/kinemetry_phot.pro
+http://bima.astro.umd.edu/nemo/man_html/rotcur.1.html
+
+
+http://skyserver.sdss3.org/dr9/en/help/browser/description.asp?n=galSpecExtra&t=U
