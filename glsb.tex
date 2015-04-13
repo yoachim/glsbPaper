@@ -245,18 +245,19 @@ By eye, GLSB systems resemble large faint spiral disks at large radii, and regul
 
 \subsection{GLSB Centers}
 
-Both our objects have been observed with SDSS, making it possible to compare them to a large number of systems.  The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.  
+Both of our objects have been observed with SDSS, making it possible to compare them to a large number of systems.  The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.  
 
-To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddned $r$ magnitude between 13.5 and 17.7.  When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology selectors).  These are simply galaxies for comparison, not a rigorously defined volume-complete sample.  Our full SQL querries are shown in \S\ref{SQL}.  This gives us a sample of 141,001 objects, 45,703 of which have red colors.  Throughout, we use the CosmoloPy\footnote{\url{http://roban.github.com/CosmoloPy/}} fiducial cosmology ($h=0.704$, $\Omega_{m_0}=0.2726$, $\Omega_{\lambda_0}=0.7274$).
+To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddned $r$ magnitude between 13.5 and 17.7.  When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology selectors).  These are simply galaxies for comparison, not a rigorously defined volume-complete sample.  Our full SQL querries are shown in \S\ref{SQL}.  This gives us a sample of 141,001 objects, 45,703 of which have red colors.  Throughout, we use the CosmoloPy\footnote{\url{http://roban.github.com/CosmoloPy/}} fiducial cosmology ($h=0.704$, $\Omega_{m_0}=0.2726$, $\Omega_{\lambda_0}=0.7274$).  Note that we are not correcting for Malmquist bias or biases in the SDSS spectroscopic selection criteria.  Our selection is simply for galaxies of a similar magnitude and redshift.  
+
 
 % based on WMAP7+BAO+H0 mean
 %>>> fidcosmo
 %{'tau': 0.087, 'omega_n_0': 0.0, 'sigma_8': 0.809, 'h': 0.704, 'N_nu': 0, 'omega_lambda_0': 0.7274, 'n': 0.963, 'Y_He': 0.24, 'z_reion': 10.4, 'omega_b_0': 0.0456, 'omega_k_0': 0.0, 't_0': 13.75, 'omega_M_0': 0.2726}
 %xxx-clearly need to do a galfit to the central objects and show the residuals!  hmm, they are not well fit by simple Sersic profiles
 
-Figure~\ref{elliptical_relations} shows where the GLSBs fall on the major galaxy relations.  We use extinction corrected magnitudes and $k$-corrected colors\citep{Chilingarian10}.  Both of our GLSBs lie on the red-sequence in a color-magnitude diagram.  
+Figure~\ref{elliptical_relations} shows where the GLSBs fall on the major galaxy relations.  We use extinction corrected magnitudes and $k$-corrected colors\citep{Chilingarian10}.  Both of our GLSBs lie on the red-sequence in the color-magnitude diagram.  
 
-The central regions of GLSBs are often called ``bulges'', however, looking at Figure~\ref{elliptical_relations}, it is clear that these are much brighter than bulges of typical spiral galaxies and the GLSBs are on the bright end of the red-sequence.  
+The central regions of GLSBs are often called ``bulges'', however, looking at Figure~\ref{elliptical_relations}, it is clear that these are much brighter than bulges of typical spiral galaxies and the centers of GLSBs are on the bright end of the red-sequence.  
 
 \begin{figure}
 \epsscale{.4}
@@ -272,10 +273,6 @@ We follow \citet{Bernardi03,Bernardi03b} in fitting fundamental plane parameters
 \chi^2 = \log R_0 - a \log \sigma - b \log I_0 - c
 \end{equation}
 where $R_0$ is the effective radius, $\sigma$ is velocity dispersion in kilometers per second and $I_0$ is the surface brightness.  The resulting best-fit parameters are  a =1.376 , b = -0.661, c = -9.938.  We note that we have not made a rigorous volume-complete selection of galaxies, rather, simply galaxies with similar magnitudes, colors, and redshifts to our GLSBs.   See \citet{Saulder13} for a more rigorous analysis of the Fundamental Plane in SDSS. 
-
-%Note that we are not correcting for Malmquist bias or biases in the SDSS spectroscopic selection criteria.  Our selection is simply for galaxies of a similar magnitude and redshift.  
-
-
 
 
 \subsection{GLSB Disks}
@@ -304,7 +301,6 @@ In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB
 %It would be nice to be able to use just the OII doublet to measure gas velocities from some of the galaxies.  Paper that discusses the range of OII ratio values in \citet{Wang04}.  Looks like it's usually around 0.5, but in low density regions it goes to 1.4.  Fuck.
 
 
-
 It might be nice to spin this as a chance to measure the DM halo of ellipticals to very large radii.  Some relevant papers for comparison:
 \citet{Weij09} use SAURON to get way out.  \citet{Proctor09} use Keck.  \citet{Murphy2011} use VP.
 
@@ -331,7 +327,7 @@ Thus, for Malin~2, we reach a radius of $\sim 6.2 R_e$, and find a dark matter f
 
 \citet{Murphy2011} reach $\sim2 R_e$ using just stellar data, and then rely on globular cluster kinematics to extended out to $5 R_e$.
 
-XXX-crap, whatever happened to the gas kinematics?  There are emission lines out there--are they bright enough to get in single fibers of not?  Looks like for Malin 2 the emission lines are only coming from one side of the galaxy.  UGC 6614 is mostly emission from the center.
+%XXX-crap, whatever happened to the gas kinematics?  There are emission lines out there--are they bright enough to get in single fibers of not?  Looks like for Malin 2 the emission lines are only coming from one side of the galaxy.  UGC 6614 is mostly emission from the center.
 
 %print, rcmass(42.,280.)
 %print, rcmass(17.,200.)
@@ -341,6 +337,8 @@ XXX-crap, whatever happened to the gas kinematics?  There are emission lines out
 
 
 XXX-It would be great to get high resolution \HI\ observations of these systems since they could probably be higher spatial resolution.
+
+XXX--We are currently observing higher spatial resolution IFU data with Gemini (GN-2015A-Q-75) of the central region of these galaxies to confim they are normal elliptical galaxies and to help constrain a more sophisticated dynamical model.
 
 \section{Star Formation Histories}
 Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra.  
