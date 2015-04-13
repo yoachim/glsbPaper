@@ -21,7 +21,7 @@
 
 \begin{document}
 
-\title{Giant Low Surface Brightness Galaxies as Merger Remnants}
+\title{Giant Low Surface Brightness Galaxies As Merger Remnants}
 
 
 \author{Peter Yoachim\altaffilmark{1}, Denise Shmitz\altaffilmark{4}, Sarah Loebman\altaffilmark{2}, SungWon Kwak\altaffilmark{1}, Victor P. Debattista\altaffilmark{3}
@@ -217,7 +217,7 @@ For each galaxy, observations were taken at three unique dither positions to pro
 
 We use the Mitchell Spectrograph software pipeline Vaccine \citep{Adams2011} to perform basic reduction tasks.  Vaccine subtracts the over-scan region and generates and subtracts a bias frame.  Bad pixels are masked.  Twilight flats and arc lamps from each night are combined.  The combined flat frame is used to trace the spatial profile of each fiber and correct for pixel-to-pixel variation.  The combined arc lamp is used to fit a wavelength solution for each fiber.  We use a 4th order polynomial and find the wavelength solutions have a typical RMS of 0.06-0.2 \AA\ ($\sim0.1$ pixel).  Vaccine then masks potential cosmic rays and collapses each fiber to a one dimensional spectrum.  The fibers are adequately spaced, and our targets are predominately low surface brightness, so we find making a fiber cross-talk correction unnecessary.
 
-Once the Vaccine routines are completed we make the following additional reductions using standard IRAF routines and custom IDL scripts.  The reduced twilight frames are used to generate a fiber-to-fiber flux correction (similar to a longslit illumination correction).  We use the b-spline procedure described in \citet{Kelson03} to generate background frames.  The corners of each frame contain enough empty fibers to measure the sky background in each exposure.  Because we bin fibers together, imperfect sky-subtraction represents a serious source of potential systematic errors.  
+Once the Vaccine routines are completed we make the following additional reductions using standard IRAF routines and custom IDL scripts.  The reduced twilight frames are used to generate a fiber-to-fiber flux correction (similar to a longslit illumination correction).  We use the b-spline procedure described in \citet{Kelson03} to generate background frames.  The corners contain enough empty fibers to measure the sky background in each exposure.  Because we bin fibers together, imperfect sky-subtraction represents a serious source of potential systematic errors.  
 
 The spectra are then rectified to a common wavelength scale, and the photo-spectroscopic standards are used to flux calibrate the spectra and correct for atmospheric extinction.  The spectra are then velocity shifted to the Local Standard of Rest.  Images taken at identical dither positions are averaged together with outlier rejection to eliminate any remaining cosmic rays.  Some observations were taken in non-photometric conditions, so before combining frames we scale them to a common average flux level.  
 
@@ -226,7 +226,9 @@ Our final reduced data for each galaxy includes 738 spectra spanning a 1.9\arcmi
 
 With our final reduced data cubes, we used Penalized Pixel-Fitting (pPXF) \citep{Cappellari04} and Gas AND Absorption Line Fitting (GANDALF) \citep{Sarzi06} on each fiber to fit stellar velocities, stellar dispersions, and emission line velocities and fluxes.  For stellar templates we use a suite of SSP spectra from \citet{Bruzual03}.  We use GANDALF to measure the [\ion{O}{2}] doublet, [\ion{O}{3}] doublet, and the higher order Balmer lines \hb, H$\gamma$, H$\delta$, H$\epsilon$ while masking the night skyline at 5577 \AA.  The fit also includes a 4th degree multiplicative polynomial to correct for any dust or flux calibration mis-match between the observations and templates.  Because our data do not extend out to \ha, we cannot use the Balmer decrement to place tight constraints on the dust extinction.  While pPXF fits the stellar velocity dispersion, our instrumental resolution is low enough ($\sim140$ \kms) that we are unable to make meaningful velocity dispersion measurements beyond the central fibers.  
 
-In addition to individual fibers, we have binned neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers.
+In addition to individual fibers, we have binned sets of three neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers. The fiber surface brightnesses are plotted in Figures~\ref{Malin2_fibers} and~\ref{ugc_fibers}, and the pPXF stellar velocity maps are shown in Figures~\ref{malin_kinem} and~\ref{ugc_kinem}.
+
+
 
 
 % Let's punt the APO spectra to the next paper--I don't think it adds much to this one anyway.
@@ -256,7 +258,7 @@ To make a comparison sample of galaxies from SDSS, we select galaxies with redsh
 %{'tau': 0.087, 'omega_n_0': 0.0, 'sigma_8': 0.809, 'h': 0.704, 'N_nu': 0, 'omega_lambda_0': 0.7274, 'n': 0.963, 'Y_He': 0.24, 'z_reion': 10.4, 'omega_b_0': 0.0456, 'omega_k_0': 0.0, 't_0': 13.75, 'omega_M_0': 0.2726}
 %xxx-clearly need to do a galfit to the central objects and show the residuals!  hmm, they are not well fit by simple Sersic profiles
 
-Figure~\ref{elliptical_relations} shows where the GLSBs fall on the major galaxy relations.  We use extinction corrected magnitudes and $k$-corrected colors\citep{Chilingarian10}.  Both of our GLSBs lie on the red-sequence in the color-magnitude diagram.  
+Figure~\ref{elliptical_relations} shows where the GLSBs fall on the major galaxy relations.  We use extinction corrected magnitudes and $k$-corrected colors \citep{Chilingarian10}.  Both of our GLSBs lie on the red-sequence in the color-magnitude diagram.  
 
 The central regions of GLSBs are often called ``bulges'', however, looking at Figure~\ref{elliptical_relations}, it is clear that these are much brighter than bulges of typical spiral galaxies and the centers of GLSBs are on the bright end of the red-sequence.  
 
@@ -277,23 +279,25 @@ where $R_0$ is the effective radius, $\sigma$ is velocity dispersion in kilomete
 
 
 \subsection{GLSB Disks}
-The diameters of these disks are very large.  Stellar disks are typically embedded in much larger \HI\ disks.  The size of the GLSB stellar disks is similar to the largest \HI\ disks observed in nearby galaxies, in support of the \citet{Mapelli08} model where the GLSB disks are the faded remnants of a normal \HI\ disk that has experienced a merger induced star-burst.
+
+
+The diameters of GLSB disks are very large, with Malin~1's stellar dist detected out to a radius of 115 kpc \citep{Moore06}.  Stellar disks are typically embedded in much larger \HI\ disks.  The size of the GLSB stellar disks is similar to the largest \HI\ disks observed in nearby galaxies, in support of the \citet{Mapelli08} model where the GLSB disks are the faded remnants of a normal \HI\ disk that has experienced a merger induced star-burst.  
 
 
 
-For comparison:  \citet{Williams13} trace star formation out to 11 disk scale lengths (radius of 22 kpc) in NGC 2403.  Maybe also look at THINGS data for comparisons on how large galaxy disks get.
+For comparison:  \citet{Williams13} trace star formation out to 11 disk scale lengths (radius of 22 kpc) in NGC 2403.  
 
 Papers that have large \HI\ rotation curves that I might compare to:
 \citet{DeBlok2008,Swaters09,Verheijen01}
 
-In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems without some additional source of angular momentum.
+In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems without some additional source of angular momentum.
 
 %/astro/store/shared-scratch1/yoachim/Research/GLSB/THINGS/thingsplot.py
 \begin{figure}
 \epsscale{.5}
 \plotone{Plots/things.eps}
 \epsscale{1}
-\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection.  It is interesing to note that the stellar disks of GLSB galaxies are often larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies and the maximum redius with a stellar flux detection for the GLSB galaxies.  It is interesing to note that the stellar disks of GLSB galaxies are often larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
 \end{figure}
 
 
@@ -384,7 +388,7 @@ The basic observational properties of GLSBs that need to be explained:
 \epsscale{0.5}
 \plotone{Plots/things_projenguess.eps}
 \epsscale{1}
-\caption{Comparison of GLSB \HI\ masses with \HI\ masses measured in the THINGS survey \citep{Walter2008}.  While the \HI\ masses in the GLSB systems are high, they are consistent with what would be available in a merger with a $\sim$110 km/s galaxy, assuming the merger did not trigger large amounts of star formation and feedback. \label{thingsMHI}}
+\caption{Comparison of GLSB \HI\ masses \citep{Pickering97} with \HI\ masses measured in the THINGS survey \citep{Walter2008}.  While the \HI\ masses in the GLSB systems are high, they are consistent with what would be available in a merger with a $\sim$110 km/s galaxy, assuming the merger did not trigger large amounts of star formation and feedback. \label{thingsMHI}}
 \end{figure}
 
 \section{Discussion}
@@ -444,7 +448,7 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \epsscale{.5}
 \plotone{Plots/Malin2profile_fit.eps}
 \epsscale{1}
-\caption{Upper Left:  SDSS image of Malin 2.  Upper Right:  Image made with the VIRUS-P datacube.  Lower:  An exponential fit to the fiber magnitudes.  Red points show fibers that were clipped while the solid line shows the best-fit.  }
+\caption{Upper Left:  SDSS image of Malin 2.  Upper Right:  Image made with the VIRUS-P datacube.  Lower:  An exponential fit to the fiber magnitudes.  Red points show fibers that were clipped while the solid line shows the best-fit.  \label{Malin2_fibers} }
 \end{figure}
 
 
@@ -529,7 +533,7 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \epsscale{0.5}
 \plotone{Plots/UGC06614profile_fit.eps}
 \epsscale{1}
-\caption{Upper Left:  SDSS image of UGC 06614.  Upper Right:  Image made with the VIRUS-P datacube.  Lower:  An exponential fit to the fiber magnitudes.  Red points show fibers that were clipped while the solid line shows the best-fit.  We only included fibers beyond the outer ring structure.  }
+\caption{Upper Left:  SDSS image of UGC 06614.  Upper Right:  Image made with the VIRUS-P datacube.  Lower:  An exponential fit to the fiber magnitudes.  Red points show fibers that were clipped while the solid line shows the best-fit.  We only included fibers beyond the outer ring structure.  \label{ugc_fibers} }
 \end{figure}
 
 %\begin{figure}
