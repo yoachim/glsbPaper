@@ -59,7 +59,7 @@ In this paper, we use IFU spectroscopy to measure the star formation histories o
 
 The problem with considering GLSB systems as normal spirals is that they are clearly outliers when one considers the specific angular momentum of the systems.  The difference between high surface brightness (HSB) spirals and low surface brightness spirals (LSB), could simply be an issue of specific angular momentum. xxx-this goes in the discussion I think. \citet{Dutton12} is a nice paper on how disk galaxies get their angular momentum--I'll need to make a calc of how much J is in the GLSB disks to compare it.
 
-GLSBs are typically classified as spriral galaxies \citep{Das13}, however, high resolution imaging of Malin~1 has shown that the central region appears to be a normal 
+GLSBs are typically classified as spiral galaxies \citep{Das13}, however, high resolution imaging of Malin~1 has shown that the central region appears to be a normal 
 
 \citet{Raskutti14} use VIRUS-P to look at stellar halo kinematics of massive ellipticals.  Lots of good stuff on fast/slow rotators.  Also a very nice plot showing the radial gradients in age and metallicity as measured from Lick indices.  They don't see any sharp transition like I do, all very smooth age and metal curves.
 
@@ -147,7 +147,7 @@ XXX-clearly need to look up bulge-to-disk metallicity gradient.  Lauren did it w
 
 XXX-need to look up some Thilker papers on extended UV disks, since these objects could be similar.  From his talk, UGC 1382 shows up in stripe 82 coadd (and NUV).  UGC 3642, GALEX shows a disk, and \HI\ is counter rotating.
 
-\citet{Salim10} Looks at HST imaging of z = 0.1 early type galaxies that have UV excess, and finds some extended disks.  They think the gas and star formation is comming from minor mergers or accretion. 
+\citet{Salim10} Looks at HST imaging of z = 0.1 early type galaxies that have UV excess, and finds some extended disks.  They think the gas and star formation is coming from minor mergers or accretion. 
 
 \citet{Salim12} Finds 2 more GLSB type objects -- could be a sign that there are multiple routes to making GLSB systems.
 
@@ -250,7 +250,7 @@ By eye, GLSB systems resemble large faint spiral disks at large radii, and regul
 
 Both of our objects have been observed with SDSS, making it possible to compare them to a large number of systems.  The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.  
 
-To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddned $r$ magnitude between 13.5 and 17.7.  When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology selectors).  These are simply galaxies for comparison, not a rigorously defined volume-complete sample.  Our full SQL querries are shown in \S\ref{SQL}.  This gives us a sample of 141,001 objects, 45,703 of which have red colors.  Throughout, we use the CosmoloPy\footnote{\url{http://roban.github.com/CosmoloPy/}} fiducial cosmology ($h=0.704$, $\Omega_{m_0}=0.2726$, $\Omega_{\lambda_0}=0.7274$).  Note that we are not correcting for Malmquist bias or biases in the SDSS spectroscopic selection criteria.  Our selection is simply for galaxies of a similar magnitude and redshift.  
+To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddened $r$ magnitude between 13.5 and 17.7.  When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology selectors).  These are simply galaxies for comparison, not a rigorously defined volume-complete sample.  Our full SQL queries are shown in \S\ref{SQL}.  This gives us a sample of 141,001 objects, 45,703 of which have red colors.  Throughout, we use the CosmoloPy\footnote{\url{http://roban.github.com/CosmoloPy/}} fiducial cosmology ($h=0.704$, $\Omega_{m_0}=0.2726$, $\Omega_{\lambda_0}=0.7274$).  Note that we are not correcting for Malmquist bias or biases in the SDSS spectroscopic selection criteria.  Our selection is simply for galaxies of a similar magnitude and redshift.  
 
 
 % based on WMAP7+BAO+H0 mean
@@ -297,7 +297,7 @@ In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB
 \epsscale{.5}
 \plotone{Plots/things.eps}
 \epsscale{1}
-\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies and the maximum redius with a stellar flux detection for the GLSB galaxies.  It is interesing to note that the stellar disks of GLSB galaxies are often larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies and the maximum radius with a stellar flux detection for the GLSB galaxies.  It is interesting to note that the stellar disks of GLSB galaxies are often larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
 \end{figure}
 
 
@@ -343,7 +343,7 @@ Thus, for Malin~2, we reach a radius of $\sim 6.2 R_e$, and find a dark matter f
 
 XXX-It would be great to get high resolution \HI\ observations of these systems since they could probably be higher spatial resolution.
 
-XXX--We are currently observing higher spatial resolution IFU data with Gemini (GN-2015A-Q-75) of the central region of these galaxies to confim they are normal elliptical galaxies and to help constrain a more sophisticated dynamical model.
+XXX--We are currently observing higher spatial resolution IFU data with Gemini (GN-2015A-Q-75) of the central region of these galaxies to confirm they are normal elliptical galaxies and to help constrain a more sophisticated dynamical model.
 
 \section{Star Formation Histories}
 Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra.  
@@ -354,7 +354,7 @@ Figures~\ref{malin2_binmap} and~\ref{ugc_binmap} show the fibers that were binne
 
 The best fitting star formation histories are shown in Figures~\ref{sfh_malin2} and~\ref{sfh_ugc}, while the best fitting stellar metallicities are shown in Figures~\ref{metal_malin2} and~\ref{metal_ugc}.  We find that {\emph{both galaxies have stellar populations dominated by old stars at all radii}}.  While the outer disks have emission lines and have spectra that are best fit with some current star formation, the total stellar mass is still overwhelmingly dominated by old stars.  Both galaxies also show very steep metallicity gradients, with centers that are super-solar metallicity (at the limit of our models), while the outer disks are both best fit by [Z/H]=-0.7.  
 
-A problem with fitting observed galaxy spetra with templates is that residuals between the model and data are dominated by non-Gaussian systematic effects such as template mis-match and improper parameterization of the SFH.  Since the residuals are non-Guassian, there is no statistical formalism for generating uncertanties in the fit.  To generate our error bars, we look at the range of fits which have $\chi^2$ values within 100 of the minimum.  In many cases, this eliminates nearly all fits except for the minimum.  In these cases, we use the 4 best-fitting models to estimate the range of possible fits.  
+A problem with fitting observed galaxy spectra with templates is that residuals between the model and data are dominated by non-Gaussian systematic effects such as template mis-match and improper parameterization of the SFH.  Since the residuals are non-Gaussian, there is no statistical formalism for generating uncertainties in the fit.  To generate our error bars, we look at the range of fits which have $\chi^2$ values within 100 of the minimum.  In many cases, this eliminates nearly all fits except for the minimum.  In these cases, we use the 4 best-fitting models to estimate the range of possible fits.  
 
 The dominance of an old stellar population at large radii seems to contradict the star-burst formation mechanism of \citet{Mapelli08}, and favor an accretion model where a galaxy already containing old stars is disrupted by a massive elliptical galaxy.  
 
@@ -367,11 +367,11 @@ It should be relatively easy to speculate about the galaxies that merged to form
 
 Figure~\ref{thingsMHI} shows the total \HI\ mass for galaxies observed in the THINGS survey \citep{Walter2008}, along with the \HI\ masses for GLSB galaxies \citep{Pickering97}.  
 
-We can't really use the stellar luminosity of the disk to constrian the projenitor since there are signs of current {\emph in situ} star formation in the disks.  However, the very low stellar metalicities point to low-mass projenitors.  
+We can't really use the stellar luminosity of the disk to constrain the progenitor since there are signs of current {\emph in situ} star formation in the disks.  However, the very low stellar metallicities point to low-mass progenitors.  
 
 Hard to estimate what the progenitor system of the disks were.  Is there a good plot of disk \HI\ mass and metallicity out there?  Might even need to measure Lick indices to try and get everything on the same metallicity system.
 
-These systems are rare enough, that one might imagine rather complicated scenarios for creating them.  For example, a three-body enocounter could eject one galaxy while leaving a second in a nearly circular orbit.  Back of the envelope, a galaxy ejected at 5000 \kms would go 1.5 degrees per gigayear.  Even if the ejection was partly along the line of sight, it would be hard to find several gigayears later.  Unlike the collisional ring scenario where one would expect the galaxy that stimulated the ring formation to still be nearby.
+These systems are rare enough, that one might imagine rather complicated scenarios for creating them.  For example, a three-body encounter could eject one galaxy while leaving a second in a nearly circular orbit.  Back of the envelope, a galaxy ejected at 5000 \kms would go 1.5 degrees per gigayear.  Even if the ejection was partly along the line of sight, it would be hard to find several gigayears later.  Unlike the collisional ring scenario where one would expect the galaxy that stimulated the ring formation to still be nearby.
 
 
 The basic observational properties of GLSBs that need to be explained:
@@ -411,9 +411,9 @@ Should probably figure out if these things are fast or slow rotators by the \cit
 
 \section{Conclusions}
 
-We have observed two giant low surface brightness galaxies with the VIRUS-P IFU.  We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a lareg disk.  The stellar stars have a disk-like velocity field, and are dominated by old stars, but do show signs of ongoing star formation.
+We have observed two giant low surface brightness galaxies with the VIRUS-P IFU.  We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.  The stellar stars have a disk-like velocity field, and are dominated by old stars, but do show signs of ongoing star formation.
 
-In a future work, we plan to combine our IFU observations with higher spatial resolution long-slit specta from the Apache Point 3.5m telescope to determine if the central ellipticals are dynamically distinct from their disks.  This data will also help up build dynamicall models for the systems.
+In a future work, we plan to combine our IFU observations with higher spatial resolution long-slit spectra from the Apache Point 3.5m telescope to determine if the central ellipticals are dynamically distinct from their disks.  This data will also help up build dynamical models for the systems.
 
 
 %--------------------------------------
@@ -726,4 +726,8 @@ AND (((ph.flags & 0x100000000000) = 0) or (ph.flags & 0x1000) = 0)
 % LocalWords:  dispersions Balmer decrement DR10 fiducial WMAP7 BAO H0 redshift
 % LocalWords:  Faber Mg2 redshifts NGC kinemetry photometry anisotropy Gyr SFH
 % LocalWords:  metallicities colliders rotators et al MNRAS de datacube Ppxf
-% LocalWords:  dashed
+% LocalWords:  dashed CDM Kasparova LSB Dutton Raskutti Sa Morganti
+%%  LocalWords:  Emonts Weijmans Ibata McConnachie Schweizer Magain
+%%  LocalWords:  Oosterloo baryonic Buote GALEX Salim Kelson outlier
+%%  LocalWords:  Bruzual Ahn Willett SQL Chilingarian Saulder Swaters
+%%  LocalWords:  Krajn GN Kuntschner situ indices Emsell Capp CasJobs
