@@ -60,21 +60,6 @@ If GLSB disks are indeed the remains of accreted dwarf galaxies, they represent 
 In comparison, the stellar disk of Malin~2 extends beyond XXX (XXX $R_e$), and the HI disk reaches beyond 100 kpc (XXX $R_e$).  These distances have occasionally been reached by x-ray observations \citep{Buote12}. 
 
 
-Points to cover in intro
-\begin{itemize}
-\item{GLSB galaxies are really big spirals}
-\item{Typically classified as extreme spirals obsessionally}
-\item{but HST observations of Malin~1 show it is a regular galaxy with a distinct extended disk \citet{Barth07}}
-\item{Models for GLSB formation}
-  \begin{itemize}
-  \item{regular growth (maybe like polar ring galaxies, or just the large end of spirals)}
-  \item{faded collisional ring. \citet{Mapelli08, Mapelli12} }
-  \item{high angular momentum accretion event. \citet{Pen06}}
-  \end{itemize}
-  \item{Discuss how, if GLSBs are merger remnants, they represent a unique possibility to trace the dark matter halo of elliptical galaxies.  }
-\end{itemize}
-
-
 
 %In this paper, we use IFU spectroscopy to measure the star formation histories of two GLSB systems.  
 
@@ -83,7 +68,7 @@ Points to cover in intro
 
 %\citet{Raskutti14} use VIRUS-P to look at stellar halo kinematics of massive ellipticals.  Lots of good stuff on fast/slow rotators.  Also a very nice plot showing the radial gradients in age and metallicity as measured from Lick indices.  They don't see any sharp transition like I do, all very smooth age and metal curves.
 
-\citet{Kasparova14} has an amazing analysis of Malin 2.  They combine ARC photometry, DIS spectra, and Gemini spectra to mass-model the system.  They find the broadband colors are not consistent with a catastrophic formation, but are best fit by exponentially declining SFH.  They think the main difference between Malin~2 and non-giant LSB galaxies is the dark matter halo scale.  I think this is begging the question a little bit 
+XXX-\citet{Kasparova14} has an amazing analysis of Malin 2.  They combine ARC photometry, DIS spectra, and Gemini spectra to mass-model the system.  They find the broadband colors are not consistent with a catastrophic formation, but are best fit by exponentially declining SFH.  They think the main difference between Malin~2 and non-giant LSB galaxies is the dark matter halo scale.  I think this is begging the question a little bit 
 
 
 %\citet{Pickering97} has the \HI\ rotation curves of these guys.  For UGC 6614, has M \HI\ $= 2.5 \pm0.2\times 10^{10} \msun h_{75}^{-2}$.  And $3.6 \pm 0.4 \times 10^{10} \msun h_{75}^{-2}$for Malin 2.  Notes that these are galaxies that are massive and DM dominated.  In Malin 2, they find some gas moving relative to the regular rotating disk, and suspect that a dwarf fell though and stimulated star formation and this could be how stars managed to form in the low density environment.  
@@ -253,10 +238,9 @@ By eye, GLSB systems resemble large faint spiral disks at large radii, and regul
 
 \subsection{GLSB Centers}
 
-Both of our objects have been observed with SDSS, making it possible to compare them to a large number of systems.  The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.  
+Both of our objects, as well as Malin 1, have been observed with SDSS, making it possible to compare them to a large number of systems.  The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.  
 
 To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddened $r$ magnitude between 13.5 and 17.7.  When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology selectors).  These are simply galaxies for comparison, not a rigorously defined volume-complete sample.  Our full SQL queries are shown in \S\ref{SQL}.  This gives us a sample of 141,001 objects, 45,703 of which have red colors.  Throughout, we use the CosmoloPy\footnote{\url{http://roban.github.com/CosmoloPy/}} fiducial cosmology ($h=0.704$, $\Omega_{m_0}=0.2726$, $\Omega_{\lambda_0}=0.7274$).  Note that we are not correcting for Malmquist bias or biases in the SDSS spectroscopic selection criteria.  Our selection is simply for galaxies of a similar magnitude and redshift.  
-
 
 % based on WMAP7+BAO+H0 mean
 %>>> fidcosmo
@@ -292,8 +276,8 @@ The diameters of GLSB disks are very large, with Malin~1's stellar dist detected
 
 For comparison:  \citet{Williams13} trace star formation out to 11 disk scale lengths (radius of 22 kpc) in NGC 2403.  
 
-Papers that have large \HI\ rotation curves that I might compare to:
-\citet{DeBlok2008,Swaters09,Verheijen01}
+%Papers that have large \HI\ rotation curves that I might compare to:
+%\citet{DeBlok2008,Swaters09,Verheijen01}
 
 In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems without some additional source of angular momentum.
 
@@ -302,7 +286,7 @@ In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB
 \epsscale{.5}
 \plotone{Plots/things.eps}
 \epsscale{1}
-\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies and the maximum radius with a stellar flux detection for Malin~1.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
 \end{figure}
 
 
@@ -639,7 +623,7 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \clearpage
 
 \appendix
-\section{SDSS SQL quarries} \label{SQL}
+\section{SDSS SQL Querries} \label{SQL}
 To build our sample of comparison galaxies from SDSS, we used the CasJobs interface to query the SDSS DR10 database.
 
 
