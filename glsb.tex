@@ -35,7 +35,7 @@ Seattle WA, 98195}
 
 
 \begin{abstract}
-We present IFU observations of the giant low surface brightness galaxies Malin~2 and UGC~6614.  We fit the stellar dynamics of these systems and compare their spatially resolved spectra to star formation history models.  We argue that Malin~2 and UGC~6614 are normal elliptical galaxies which have undergone a high angular momentum merger which formed their GLSB disks, making them unique systems for probing the dark matter halos of elliptical systems.  We find the stellar dynamics are consistent with earlier measurements of the GLSB \HI\ disks.  The stellar populations of the GLSB disks are dominated by old metal-poor stars, while the central ellipticals are metal rich.
+We present IFU observations of the giant low surface brightness galaxies Malin~2 and UGC~6614.  We fit the stellar dynamics of these systems and compare their spatially resolved spectra to star formation history models.  We argue that Malin~2 and UGC~6614 are normal elliptical galaxies which have undergone a high angular momentum mergers which formed their GLSB disks, making them unique systems for probing the dark matter halos of elliptical systems.  We find the stellar dynamics are consistent with earlier measurements of the GLSB \HI\ disks.  The stellar populations of the GLSB disks are dominated by old metal-poor stars, while the central ellipticals are metal rich.
 
 \end{abstract}
 \keywords{galaxies: kinematics and dynamics --- galaxies: formation --- galaxies: structure}
@@ -44,20 +44,20 @@ We present IFU observations of the giant low surface brightness galaxies Malin~2
 
 \section{Introduction}
 
-Since the discovery of Malin~1 \citep{Bothun87}, giant low surface brightness galaxies (GLSB) have presented a unique problem for galaxy formation theories.  Low surface brightness (LSB) galaxies are typically defined as disks with central surface brightnesses fainter than 23 $B$ mag arcsec$^2$.  While LSB galaxies span a wide range of sizes and masses, the few giant low surface brightness that have been discovered seem to be unrelated objects that are at least an order of magnitude larger in extent than typical LSB systems (XXX-cite). 
+Since the discovery of Malin~1 \citep{Bothun87}, giant low surface brightness galaxies (GLSB) have presented a unique problem for galaxy formation theories.  Low surface brightness (LSB) galaxies are typically defined as disks with central surface brightnesses fainter than 23 $B$ mag arcsec$^2$.  While LSB galaxies span a wide range of sizes and masses, the few giant low surface brightness that have been discovered seem to be unrelated objects that are at least an order of magnitude larger in extent than typical LSB systems. 
 
-Observers tend to classify GLSB systems as normal spirals.  \citet{Matthews01b} list Malin~2 as an Scd while \citet{Das13} concludes that GLSB systems are an extreme form of late type spiral galaxies.  Similarly, \citet{Kasparova14} claim that the large dark matter scale of Malin~2 can explain it's features.  Even the Galaxy Zoo project classifies GLSB galaxies as spirals.  While GLSB systems superficially resemble normal spiral galaxies, they are clearly extreme outliers when their scale lengths are compared to other galaxy samples, being around a factor of 2 larger than the largest typical spirals \citep{Dalcanton97}. (xxx-maybe make a plot of SDSS spiral scale lengths and plot the GLSB systems).
+Observers tend to classify GLSB systems as normal spirals.  \citet{Matthews01b} list Malin~2 as an Scd while \citet{Das13} concludes that GLSB systems are an extreme form of late type spiral galaxies.  Similarly, \citet{Kasparova14} claim that the large dark matter scale of Malin~2 can explain it's features.  Even the Galaxy Zoo project classifies GLSB galaxies as spirals.  While GLSB systems superficially resemble normal spiral galaxies, they are clearly extreme outliers when their scale lengths are compared to other galaxy samples, being around a factor of 2 larger than the largest typical spirals \citep{Dalcanton97}. 
 
-The disks in GLSB systems are incredibly large, with Malin~1 being detected to a radius of over 100 kpc \citep{Moore06}.  Disks of this size are a challenge for typical $\Lambda$CDM cosmology galaxy formation and exotic formation scenarios have been proposed for GLSB systems.  \citet{Mapelli08} form GLSB-like galaxies via the fading of collisional ring galaxies.  In their model, a collision sets off an expanding ring of star formation.  As this the star formation subsides and the stellar population ages, the ring galaxy fades over $\sim$100 Myr to resembles observed GLSBs.  One obvious problem with this scenario is that most GLSB's are relatively isolated, and thus there are no obvious candidates for the impactor systems that would have triggered the star formation burst.  
+The disks in GLSB systems are incredibly large, with Malin~1 being detected in $R$-band to a radius of over 100 kpc \citep{Moore06}.  Disks of this size are a challenge for typical $\Lambda$CDM cosmology galaxy formation and exotic formation scenarios have been proposed for GLSB systems.  \citet{Mapelli08} form GLSB-like galaxies in simulations via the fading of collisional ring galaxies.  In their model, a collision sets off an expanding ring of star formation.  As this the star formation subsides and the stellar population ages, the ring galaxy fades over $\sim$100 Myr to resembles observed GLSBs.  One obvious problem with this scenario is that most GLSB's are relatively isolated, and thus there are no obvious candidates for the impactor systems that would have triggered the star formation burst.  
 
-The final formation scenario for GLSB systems is that they are normal galaxies that undergo a high angular momentum minor merger where the LSB disk is the shredded remains of an accreted galaxy.  \citet{Pen06} find that extended disks can be formed via the disruption of dwarf galaxies.  These simulated debrie disks have exponential profiles and extend out to 200 kpc from the central galaxy.
+The another formation scenario for GLSB systems is that they are normal galaxies that undergo a high angular momentum minor merger where the LSB disk is the shredded remains of an accreted galaxy.  \citet{Pen06} find that extended disks can be formed via the disruption of dwarf galaxies.  These simulated debrie disks have exponential profiles and extend out to 200 kpc from the central galaxy.
 
 Observations of Malin~1 support the accretion model of GLSBs.  \citet{Barth07} analyze HST imaging of Malin~1 and find that the central object is well described as a normal early-type barred galaxy that was previously unresolved in ground-based imaging. \citet{Barth07} points out that exteded disk structures in galaxies such as M31 appear to be a smooth continuation of the inner disk \citep{Ferguson02}, while Malin~1's extended disk is better described as a distinct component, (although \citet{Ibata05} claim M31's extended disk is of accretion origin).
 
 
-If GLSB disks are indeed the remains of accreted dwarf galaxies, they represent a unique opportunity to observationally probe the outer regions of galaxy dark matter halos, especailly if they form around elliptical galaxies.  The mass profiles of elliptical galaxies have been difficult to constrain since they lack the extended \HI\ disks found around spirals.  As an example of how difficult it can be to measure the outer regions of ellipical galaxy kinematics, \citet{Murphy2011} model M87 out to $\sim$23 kpc with stellar kinematics and out to 51 kpc with globular clusters (or $R=4.8 R_e$, where $R_e$ is the effective radius of M87). \citet{Raskutti14} are also limited to measuring kinematics out to $\sim$2-5 $R_e$.  
+If GLSB disks are indeed the remains of accreted dwarf galaxies, they represent a unique opportunity to observationally probe the outer regions of galaxy dark matter halos, especailly if they form around elliptical galaxies.  The mass profiles of elliptical galaxies have been difficult to constrain since they lack the extended \HI\ disks found around spirals.  As an example of how difficult it can be to measure the outer regions of ellipical galaxy kinematics, \citet{Murphy2011} model M87 out to $\sim$23 kpc with stellar kinematics and out to 51 kpc with globular clusters (or $R=4.8 R_e$, where $R_e$ is the effective radius). \citet{Raskutti14} are also limited to measuring kinematics out to $\sim$2-5 $R_e$.  
 
-In comparison, the stellar disk of Malin~2 extends beyond XXX (XXX $R_e$), and the HI disk reaches beyond 100 kpc (XXX $R_e$).  These distances have occasionally been reached by x-ray observations \citep{Buote12}. 
+In comparison, the stellar disk of Malin~2 extends beyond 40 kpc (5.9 $R_e$), and the HI disk reaches beyond 100 kpc (14.8 $R_e$).  These distances have occasionally been reached by x-ray observations \citep{Buote12}. 
 
 
 
@@ -369,11 +369,11 @@ The basic observational properties of GLSBs that need to be explained:
 \item{These galaxies have \HI\ disks that extend much farther than typical spiral galaxies (Figure~\ref{disk_comp}). }
 \item{While GLSBs have large disks, the total \HI\ mass in these disks is lower than expected given their rotational velocities (Figure~\ref{thingsMHI})}
 \item{The central bulges are similar to elliptical galaxies in SDSS (Figure~\ref{elliptical_relations}).}
-\item{The stellar populations in the centers of GLSBs are old and very metal rich.}
-\item{The stellar populations in the extended disks shows some signs of ongoing star formation, but is consistent with being dominated by an old metal poor population.}
+\item{The stellar populations in the centers of GLSBs are old and very metal-rich.}
+\item{The stellar populations in the extended disks shows some signs of ongoing star formation, but is consistent with being dominated by an old metal-poor population.}
 \end{enumerate}
 
-%/astro/store/scratch/tmp/yoachim/Research/GLSB/THINGS/guess_projen.py
+%--now on new mac.  /Users/yoachim/Research/GLSB/THINGS/guess_projen.py
 \begin{figure}
 \epsscale{0.5}
 \plotone{Plots/things_projenguess.eps}
@@ -421,10 +421,9 @@ XXX-clearly need to look up bulge-to-disk metallicity gradient.  Lauren did it w
 
 \section{Conclusions}
 
-We have observed two giant low surface brightness galaxies with the VIRUS-P IFU.  We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.  The stellar stars have a disk-like velocity field, and are dominated by old stars, but do show signs of ongoing star formation.
+We have observed two giant low surface brightness galaxies with the VIRUS-P IFU.  We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.  We find the inner bulge is similar to elliptical galaxies found in SDSS.  The stars have a disk-like velocity field, are dominated by old stars, but do show signs of ongoing star formation. The stars also show a sharp metalicity transition, consistent with the disk forming independently of the bulge. The \HI content of the disk is also consistent with coming from a low-mass accreted galaxy.
 
-In a future work, we plan to combine our IFU observations with higher spatial resolution long-slit spectra from the Apache Point 3.5m telescope to determine if the central ellipticals are dynamically distinct from their disks.  This data will also help up build dynamical models for the systems.
-
+In a future work, we plan to combine our IFU observations with higher spatial resolution long-slit spectra from the Apache Point 3.5m telescope to determine if the central ellipticals are dynamically distinct from their disks.  
 
 %--------------------------------------
 \acknowledgments
