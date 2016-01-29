@@ -1,5 +1,5 @@
-\documentclass[12pt,preprint]{aastex}
-%\documentclass{emulateapj}
+%\documentclass[12pt,preprint]{aastex}
+\documentclass{emulateapj}
 \usepackage{url}
 %\usepackage{natbib}
 %\usepackage{xspace}
@@ -145,7 +145,7 @@ XXX-\citet{Kasparova14} has an amazing analysis of Malin 2.  They combine ARC ph
 
 
 
-\begin{deluxetable}{l l c c c c c c}
+\begin{deluxetable*}{l l c c c c c c}
 %\tabletypesize{\small \footnotesize \scriptsize}
 \tabletypesize{\small}
 %\rotate
@@ -160,11 +160,12 @@ XXX-\citet{Kasparova14} has an amazing analysis of Malin 2.  They combine ARC ph
      &  \colhead{(DR 9)}   &     &  \colhead{(mag)}    & \colhead{arcsec} & \colhead{\kms}  &\colhead{log$_{10}$M$_{\odot}$}&\colhead{log$_{10}$M$_{\odot}$}
 \label{basic_prop}}    
 \startdata
+XXX-add Malin 1
 Malin 2 & 1237667735572381852 &   0.046 & 14.34 & 7.17 & 202  & 11.15 & 10.6\\
 UGC 06614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 & 10.66 & 10.5
 \enddata
 \tablecomments{\HI\ masses updated to our adopted cosmological parameters from \citet{Pickering97}.  The rest taken from SDSS.}
-\end{deluxetable}
+\end{deluxetable*}
 
 % Updating the Pickering MI masses:
 % M_\HI\ = 2.36e5 * D^2 * int(S)
@@ -272,7 +273,7 @@ where $R_0$ is the effective radius, $\sigma$ is velocity dispersion in kilomete
 \subsection{GLSB Disks}
 
 
-The diameters of GLSB disks are very large, with Malin~1's stellar dist detected out to a radius of 115 kpc \citep{Moore06}.  Stellar disks are typically embedded in much larger \HI\ disks.  The size of the GLSB stellar disks is similar to the largest \HI\ disks observed in nearby galaxies, in support of the \citet{Mapelli08} model where the GLSB disks are the faded remnants of a normal \HI\ disk that has experienced a merger induced star-burst.  
+The diameters of GLSB disks are very large, with Malin~1's stellar disk detected out to a radius of 115 kpc \citep{Moore06} and 80 kpc \citep{Galaz15}.  Stellar disks are typically embedded in much larger \HI\ disks.  The size of the GLSB stellar disks is similar to the largest \HI\ disks observed in nearby galaxies, in support of the \citet{Mapelli08} model where the GLSB disks are the faded remnants of a normal \HI\ disk that has experienced a merger induced star-burst.  
 
 
 
@@ -281,14 +282,14 @@ For comparison:  \citet{Williams13} trace star formation out to 11 disk scale le
 %Papers that have large \HI\ rotation curves that I might compare to:
 %\citet{DeBlok2008,Swaters09,Verheijen01}
 
-In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems without some additional source of angular momentum.
+In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems unless an interaciton is able to boost the \HI\ angular momentum.
 
 %/astro/store/shared-scratch1/yoachim/Research/GLSB/THINGS/thingsplot.py
 \begin{figure}
 \epsscale{.5}
 \plotone{Plots/things.eps}
 \epsscale{1}
-\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1 XXX.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
 \end{figure}
 
 
@@ -314,7 +315,7 @@ The Malin 2 rotation curve is rather complicated, having several abrupt rises.  
 
 The lack of rotation in the central regions of the galaxies is not particularly surprising, as this is the region that is flux-dominated by the central elliptical galaxy.  XXX-that hopefully we have data that shows they are not rotating or rotating in a different orientation.
 
-The extracted rotation curves imply large dark matter halos.  For Malin 2, $V_{circ}\sim 280$ \kms at $R=42$ kpc implies a mass of $7.6\times 10^{11} \msun$ (compared to an SDSS stellar mass of $1.4\times 10^{11}$).  For UGC 6614, $V_{circ}\sim 200$ \kms at $R=17$ kpc gives a dynamical mass of $1.6\times 10^{11} \msun$ (compared to a stellar mass of$0.46\times 10^{11} \msun$ ).  
+The extracted rotation curves imply large dark matter halos.  For Malin 2, $V_{circ}\sim 280$ \kms at $R=42$ kpc implies a mass of $7.6\times 10^{11} \msun$ (compared to an SDSS stellar mass of $1.4\times 10^{11}$).  For UGC 6614, $V_{circ}\sim 200$ \kms at $R=17$ kpc gives a dynamical mass of $1.6\times 10^{11} \msun$ (compared to a stellar mass of $0.46\times 10^{11} \msun$ ).  
 
 %using /astro/store/shared-scratch1/yoachim/Research/GLSB/Analysis/mass_estm.pro
 If we use the circular speed of the \HI\ data, we end up with masses of $25\times 10^{11} \msun$ for Malin 2 and $6.5\times 10^{11} \msun$ for UGC 6614.  So that's dynamical to stellar mass ratios of 18 and 14 respectively.  Looks like they both have M$_{\rm{HI}}$ around 3-4 $10^{10} \msun$.  
@@ -338,7 +339,7 @@ XXX--We are currently observing higher spatial resolution IFU data with Gemini (
 
 \section{Star Formation Histories}
 
-Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra.  
+Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra. XXX-cite which SED code I'm using and IMF etc. 
   
 
 Figures~\ref{malin2_binmap} and~\ref{ugc_binmap} show the fibers that were binned and the resulting spectra for Malin 2 and UGC 06614.  Both galaxies have elliptical-galaxy like spectra in their centers, with outskirts that have significant emission lines.  
@@ -486,15 +487,15 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 %XXX-do an actual tilted ring fit to this shit.
 
 
-\begin{figure}
+\begin{figure*}
 \epsscale{0.25}
-\plotone{Plots/dataMalin2.eps}\plotone{Plots/modelMalin2.eps}\plotone{Plots/data_modelMalin2.eps}
+\plotone{Plots/dataMalin2.eps}\plotone{Plots/modelMalin2.eps}\plotone{Plots/data_modelMalin2.eps} \\
 \plotone{Plots/databinned_Malin2.eps}\plotone{Plots/modelbinned_Malin2.eps}\plotone{Plots/data_modelbinned_Malin2.eps}
 %\epsscale{.5}
 \epsscale{1}
 \plottwo{Plots/kinembinned_Malin2.eps}{Plots/kinem_HI_binned_Malin2.eps}
 \caption{Fitting the line-of-sight velocity maps measured with Ppxf with the kinemetry package.  The dashed curve shows the expected stellar mass contribution to the rotation curve.  Vertical lines mark $R_e$ and $5R_e$.  \HI\ data from \citet{Pickering97}.  \label{malin_kinem}}
-\end{figure}
+\end{figure*}
 
 
 %\begin{figure}
@@ -597,15 +598,15 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \end{figure}
 
 
-\begin{figure}
+\begin{figure*}
 \epsscale{0.25}
-\plotone{Plots/dataUGC06614.eps}\plotone{Plots/modelUGC06614.eps}\plotone{Plots/data_modelUGC06614.eps}
+\plotone{Plots/dataUGC06614.eps}\plotone{Plots/modelUGC06614.eps}\plotone{Plots/data_modelUGC06614.eps} \\
 \plotone{Plots/databinned_UGC06614.eps}\plotone{Plots/modelbinned_UGC06614.eps}\plotone{Plots/data_modelbinned_UGC06614.eps}
 %\epsscale{.5}
 \epsscale{1}
 \plottwo{Plots/kinembinned_UGC06614.eps}{Plots/kinem_HI_binned_UGC06614.eps}
 \caption{Fitting the velocity maps with kinemetry package. Vertical lines mark $R_e$ and $5R_e$.  The dashed lines shows a rotation curve based in the enclosed flux, normalized so that all the SDSS stellar mass is contained within $3R_e$.  \HI\ data from \citet{Pickering97}.\label{ugc_kinem}}
-\end{figure}
+\end{figure*}
 
 %\begin{figure}
 %\epsscale{0.25}
