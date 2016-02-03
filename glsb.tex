@@ -50,12 +50,12 @@ Observers tend to classify GLSB systems as normal spirals.  \citet{Matthews01b} 
 
 The disks in GLSB systems are incredibly large, with Malin~1 being detected in $R$-band to a radius of over 100 kpc \citep{Moore06}.  Disks of this size are a challenge for typical $\Lambda$CDM cosmology galaxy formation and exotic formation scenarios have been proposed for GLSB systems.  \citet{Mapelli08} form GLSB-like galaxies in simulations via the fading of collisional ring galaxies.  In their model, a collision sets off an expanding ring of star formation.  As this the star formation subsides and the stellar population ages, the ring galaxy fades over $\sim$100 Myr to resembles observed GLSBs.  One obvious problem with this scenario is that most GLSB's are relatively isolated, and thus there are no obvious candidates for the impactor systems that would have triggered the star formation burst.  
 
-The another formation scenario for GLSB systems is that they are normal galaxies that undergo a high angular momentum minor merger where the LSB disk is the shredded remains of an accreted galaxy.  \citet{Pen06} find that extended disks can be formed via the disruption of dwarf galaxies.  These simulated debrie disks have exponential profiles and extend out to 200 kpc from the central galaxy.
+The another formation scenario for GLSB systems is that they are normal galaxies that undergo a high angular momentum minor merger where the LSB disk is the shredded remains of an accreted galaxy.  \citet{Pen06} find that extended disks can be formed via the disruption of dwarf galaxies.  These simulated debris disks have exponential profiles and extend out to 200 kpc from the central galaxy.
 
-Observations of Malin~1 support the accretion model of GLSBs.  \citet{Barth07} analyze HST imaging of Malin~1 and find that the central object is well described as a normal early-type barred galaxy that was previously unresolved in ground-based imaging. \citet{Barth07} points out that exteded disk structures in galaxies such as M31 appear to be a smooth continuation of the inner disk \citep{Ferguson02}, while Malin~1's extended disk is better described as a distinct component, (although \citet{Ibata05} claim M31's extended disk is of accretion origin).
+Observations of Malin~1 support the accretion model of GLSBs.  \citet{Barth07} analyze HST imaging of Malin~1 and find that the central object is well described as a normal early-type barred galaxy that was previously unresolved in ground-based imaging. \citet{Barth07} points out that extended disk structures in galaxies such as M31 appear to be a smooth continuation of the inner disk \citep{Ferguson02}, while Malin~1's extended disk is better described as a distinct component, (although \citet{Ibata05} claim M31's extended disk is of accretion origin).
 
 
-If GLSB disks are indeed the remains of accreted dwarf galaxies, they represent a unique opportunity to observationally probe the outer regions of galaxy dark matter halos, especailly if they form around elliptical galaxies.  The mass profiles of elliptical galaxies have been difficult to constrain since they lack the extended \HI\ disks found around spirals.  As an example of how difficult it can be to measure the outer regions of ellipical galaxy kinematics, \citet{Murphy2011} model M87 out to $\sim$23 kpc with stellar kinematics and out to 51 kpc with globular clusters (or $R=4.8 R_e$, where $R_e$ is the effective radius). \citet{Raskutti14} are also limited to measuring kinematics out to $\sim$2-5 $R_e$.  
+If GLSB disks are indeed the remains of accreted dwarf galaxies, they represent a unique opportunity to observationally probe the outer regions of galaxy dark matter halos, especially if they form around elliptical galaxies.  The mass profiles of elliptical galaxies have been difficult to constrain since they lack the extended \HI\ disks found around spirals.  As an example of how difficult it can be to measure the outer regions of elliptical galaxy kinematics, \citet{Murphy2011} model M87 out to $\sim$23 kpc with stellar kinematics and out to 51 kpc with globular clusters (or $R=4.8 R_e$, where $R_e$ is the effective radius). \citet{Raskutti14} are also limited to measuring kinematics out to $\sim$2-5 $R_e$.  
 
 In comparison, the stellar disk of Malin~2 extends beyond 40 kpc (5.9 $R_e$), and the HI disk reaches beyond 100 kpc (14.8 $R_e$).  These distances have occasionally been reached by x-ray observations \citep{Buote12}. 
 
@@ -156,16 +156,22 @@ XXX-\citet{Kasparova14} has an amazing analysis of Malin 2.  They combine ARC ph
 \tablecaption{Basic Properties of GLSB Galaxies}
 \tablehead{
 \colhead{Name} & \colhead{SDSS ID}   &  \colhead{z}  &\colhead{$r$}  & \colhead{$R_e$} 
-& \colhead{$\sigma$} & Stellar Mass & \colhead{\HI\ mass}\\
-     &  \colhead{(DR 9)}   &     &  \colhead{(mag)}    & \colhead{arcsec} & \colhead{\kms}  &\colhead{log$_{10}$M$_{\odot}$}&\colhead{log$_{10}$M$_{\odot}$}
+& \colhead{$\sigma$}  & \colhead{\HI\ Mass} & \colhead{Stellar Mass} \\
+     &  \colhead{(DR 10)}   &     &  \colhead{(mag)}    & \colhead{arcsec} & \colhead{\kms} & \colhead{log$_{10}$M$_{\odot}$} & \colhead{log$_{10}$M$_{\odot}$}
 \label{basic_prop}}    
 \startdata
-XXX-add Malin 1
-Malin 2 & 1237667735572381852 &   0.046 & 14.34 & 7.17 & 202  & 11.15 & 10.6\\
-UGC 06614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 & 10.66 & 10.5
+Malin 1 & 1237661068728139925 & 0.083 & 16.70 & 1.86 & 177 &  10.9 & 11.1 \\
+Malin 2 & 1237667735572381852 &   0.046 & 14.34 & 7.17 & 202  &  10.6 & 11.3 \\
+UGC 06614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 &  10.5 & 10.9
 \enddata
-\tablecomments{\HI\ masses updated to our adopted cosmological parameters from \citet{Pickering97}.  The rest taken from SDSS.}
+\tablecomments{\HI\ masses updated to our adopted cosmological parameters from \citet{Pickering97}.  The rest taken from SDSS. Stellar masses calculated from \citet{Conroy09}}
 \end{deluxetable*}
+
+% SDSS stellar masses.  using stellarMassFSPSGranEarlyDust:
+% Malin 2:  logMass	11.3307373297902
+% Malin 1:  logMass	11.1328074307929
+% UGC 6614: logMass	10.8745260407613
+
 
 % Updating the Pickering MI masses:
 % M_\HI\ = 2.36e5 * D^2 * int(S)
@@ -260,7 +266,7 @@ The central regions of GLSBs are often called ``bulges'', however, looking at Fi
 \plotone{Plots/Fundamental_Plane.eps}\plotone{Plots/mg_sigma.eps}
 \epsscale{1}
 \caption{
-Top Left:  The color-magnitude diagram for 141,000 galaxies of similar redshift and magnitude as Malin 2 and UGC 6614.  Top Right:  The Faber-Jackson relation for 45,700 SDSS galaxies, along with a best-fit line.  Left:  The $r$-band fundamental plane from SDSS along with our GLSB galaxies and best-fit line.  Bottom Right:  The relation between central velocity dispersion and the Mg2 absorption feature.   Looking at the SDSS data, our GLSB galaxies appear as realtively typical red elliptical galaxies.  \label{elliptical_relations}}
+Top Left:  The color-magnitude diagram for 141,000 galaxies of similar redshift and magnitude as Malin 2 and UGC 6614.  Top Right:  The Faber-Jackson relation for 45,700 SDSS galaxies, along with a best-fit line.  Left:  The $r$-band fundamental plane from SDSS along with our GLSB galaxies and best-fit line.  Bottom Right:  The relation between central velocity dispersion and the Mg2 absorption feature.   Looking at the SDSS data, our GLSB galaxies appear as relatively typical red elliptical galaxies.  \label{elliptical_relations}}
 \end{figure*}
 
 We follow \citet{Bernardi03,Bernardi03b} in fitting fundamental plane parameters to our selected SDSS galaxies.  We fit the fundamental plane by minimizing $\chi^2$ in, 
@@ -282,14 +288,14 @@ For comparison:  \citet{Williams13} trace star formation out to 11 disk scale le
 %Papers that have large \HI\ rotation curves that I might compare to:
 %\citet{DeBlok2008,Swaters09,Verheijen01}
 
-In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems unless an interaciton is able to boost the \HI\ angular momentum.
+In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems unless an interaction is able to boost the \HI\ angular momentum.
 
 %/astro/store/shared-scratch1/yoachim/Research/GLSB/THINGS/thingsplot.py
 \begin{figure*}
 \epsscale{.5}
 \plotone{Plots/things.eps}
 \epsscale{1}
-\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Moore06}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1 XXX.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Galaz15}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1 XXX.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
 \end{figure*}
 
 
@@ -306,7 +312,7 @@ It might be nice to spin this as a chance to measure the DM halo of ellipticals 
 
 The kinematics of the extended GLSB disks represents a unique probe for measuring the extended dark matter halo of elliptical galaxies.  
 
-We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring model to the stellar kinematics.  For these fits, we hold the position angle and inclination fixed to values found from fitting the fiber-photometry.  Figures~\ref{malin_kinem} and~\ref{ugc_kinem} show the kinemetry fits and extracted rotation curves.  We iterate the fit, clipping residuals which deviate from the model my more than 250 \kms.  
+We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring model to the stellar kinematics.  For these fits, we hold the position angle and inclination fixed to values found from fitting the fiber-photometry.  Figures~\ref{malin_kinem} and~\ref{ugc_kinem} show the kinemetry fits and extracted rotation curves.  We iterate the fit, clipping residuals which deviate from the model by more than 250 \kms.  
 
 While we are making rather sweeping assumptions about the nature of the GLSB disks by fitting a simple disk with fixed position angle and inclination, the fits are quite good.  We also note that by observing disks, we do not have to worry about the velocity anisotropy parameter that traditionally makes dynamical modeling of ellipticals difficult.
 
@@ -339,7 +345,7 @@ XXX--We are currently observing higher spatial resolution IFU data with Gemini (
 
 \section{Star Formation Histories}
 
-Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra. XXX-cite which SED code I'm using and IMF etc. 
+Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra. We use \citet{Bruzual03} with a Chabrier IMF to generate the model spectra. 
   
 
 Figures~\ref{malin2_binmap} and~\ref{ugc_binmap} show the fibers that were binned and the resulting spectra for Malin 2 and UGC 06614.  Both galaxies have elliptical-galaxy like spectra in their centers, with outskirts that have significant emission lines.  
@@ -422,9 +428,11 @@ Should probably figure out if these things are fast or slow rotators by the \cit
 XXX-clearly need to look up bulge-to-disk metallicity gradient.  Lauren did it with colors in \citet{MacArthur04}.  Nice look with metallicity gradients as a function of scale-length, and kpc, and vrot and galaxy type.  Did spectra gradients in \citet{MacArthur09}.  MANGA would make this easy to compare...Maybe there's a SAURON paper on metallicity gradients.
 
 
+While the old stellar populations in the disks is evidence against the \citet{Mapelli08} formation scenario, we have not addressed what collisional ring galaxies do evolve into.  Since modern photometric surveys are often surface brightness limited, it is possible a gLSB system will be found in the future that is descended from a collisional ring.  
+
 \section{Conclusions}
 
-We have observed two giant low surface brightness galaxies with the VIRUS-P IFU.  We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.  We find the inner bulge is similar to elliptical galaxies found in SDSS.  The stars have a disk-like velocity field, are dominated by old stars, but do show signs of ongoing star formation. The stars also show a sharp metalicity transition, consistent with the disk forming independently of the bulge. The \HI content of the disk is also consistent with coming from a low-mass accreted galaxy.
+We have observed two giant low surface brightness galaxies with the VIRUS-P IFU.  We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.  We find the inner bulge is similar to elliptical galaxies found in SDSS.  The stars have a disk-like velocity field, are dominated by old stars, but do show signs of ongoing star formation. The stars also show a sharp metallicity transition, consistent with the disk forming independently of the bulge. The \HI content of the disk is also consistent with coming from a low-mass accreted galaxy.
 
 In a future work, we plan to combine our IFU observations with higher spatial resolution long-slit spectra from the Apache Point 3.5m telescope to determine if the central ellipticals are dynamically distinct from their disks.  
 
@@ -625,7 +633,7 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \clearpage
 
 \appendix
-\section{SDSS SQL Querries} \label{SQL}
+\section{SDSS SQL Queries} \label{SQL}
 To build our sample of comparison galaxies from SDSS, we used the CasJobs interface to query the SDSS DR10 database.
 
 
@@ -733,10 +741,10 @@ AND (((ph.flags & 0x100000000000) = 0) or (ph.flags & 0x1000) = 0)
 % LocalWords:  Schiminovich Iodice Belokurov Fairchild RMS pPXF Cappellari th
 % LocalWords:  GANDALF Sarzi CosmoloPy Bernardi GLSBs DeBlok Verheijen Yoachim
 % LocalWords:  SEDs Brookhaven Instituto Astrofisica Canarias Notre JINA DM
-% LocalWords:  IFU UGC HSB SAURON ellipticals Spitzer IC
+% LocalWords:  IFU UGC HSB SAURON ellipticals Spitzer IC Galaz
 % LocalWords:  kpc HIPASS CCD metallicity MANGA SDSS arcsec lensing IRAF
 % LocalWords:  Spectrograph spectrograph IDL longslit photometric FWHM SSP mis
-% LocalWords:  dispersions Balmer decrement fiducia redshift
+% LocalWords:  dispersions Balmer decrement fiducia redshift Chabrier
 % LocalWords:  Faber redshifts NGC kinemetry photometry anisotropy Gyr SFH
 % LocalWords:  metallicities colliders rotators et al MNRAS de datacube Ppxf
 % LocalWords:  dashed CDM Kasparova LSB Dutton Raskutti Sa Morganti
