@@ -172,7 +172,6 @@ UGC 06614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 &  10.5 & 10.9
 % Malin 1:  logMass	11.1328074307929
 % UGC 6614: logMass	10.8745260407613
 
-
 % Updating the Pickering MI masses:
 % M_\HI\ = 2.36e5 * D^2 * int(S)
 % D = c(z+0.5(1.0-q_0)z^2)/H_0
@@ -206,9 +205,7 @@ UGC 06614 & 5.7 & 33.4
 
 \section{Observations}
 
-\subsection{IFU spectra}
 We obtained spatially resolved spectroscopy of our target galaxies using the Mitchell Spectrograph (formerly VIRUS-P)\citep{Hill08} on the 2.7m Harlan J. Smith telescope at McDonald Observatory.  Observations were made during dark time in February, March, and April 2010.  Identical instrument setups were used for all observations.  The Mitchell Spectrograph with the VP-2 IFU bundle used here has a square array of 246 optical fibers which sample the 1.9\arcmin$\times$1.9\arcmin\ field-of-view with a 1/3 filling factor, with each fiber having a diameter of 4.23\arcsec.  The spectrograph images the spectrum of each fiber on a 2048$\times$2048 Fairchild Imaging CCD.  
-
 
 For each galaxy, observations were taken at three unique dither positions to provide nearly complete spatial coverage.  Individual science exposures were 30 minutes.  Malin 2 had 10 exposures per dither position (11 exposures for dither position 1), for a total of 15 hours of exposure time.  Observations of UGC 06614 had alignment issues between observing runs.  This resulted in a deep stack of 6 exposures, and a shallow stack with only 2 exposures.  With only 2 exposures, cosmic ray rejection becomes difficult, therefore, we use these shallow frames when looking at the surface brightness profiles, but use only the aligned deep co-add when analyzing the stellar kinematics and stellar populations. Twilight flat field frames, bias frames, and wavelength calibration Hg and Cd lamps were taken during the day.  Flux standard stars were observed in twilight.  
 
@@ -222,13 +219,9 @@ The spectra are then rectified to a common wavelength scale, and the photo-spect
 
 Our final reduced data for each galaxy includes 738 spectra spanning a 1.9\arcmin$\times$1.9\arcmin\ field-of-view.  The spectra have a wavelength range of $\sim$3550-5840 with 2.2 \AA\ pixels (with some fibers only reaching 5500 \AA\ due to the warping of the trace).  The FWHM of reduced arc lamp images is 5.3 \AA, giving us a resolution of $R\sim700-1000$.  The fiber-to-fiber changes in resolution are less than 10\%.  
 
-
 With our final reduced data cubes, we used Penalized Pixel-Fitting (pPXF) \citep{Cappellari04} and Gas AND Absorption Line Fitting (GANDALF) \citep{Sarzi06} on each fiber to fit stellar velocities, stellar dispersions, and emission line velocities and fluxes.  For stellar templates we use a suite of SSP spectra from \citet{Bruzual03}.  We use GANDALF to measure the [\ion{O}{2}] doublet, [\ion{O}{3}] doublet, and the higher order Balmer lines \hb, H$\gamma$, H$\delta$, H$\epsilon$ while masking the night skyline at 5577 \AA.  The fit also includes a 4th degree multiplicative polynomial to correct for any dust or flux calibration mis-match between the observations and templates.  Because our data do not extend out to \ha, we cannot use the Balmer decrement to place tight constraints on the dust extinction.  While pPXF fits the stellar velocity dispersion, our instrumental resolution is low enough ($\sim140$ \kms) that we are unable to make meaningful velocity dispersion measurements beyond the central fibers.  
 
 In addition to individual fibers, we have binned sets of three neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers. The fiber surface brightnesses are plotted in Figures~\ref{Malin2_fibers} and~\ref{ugc_fibers}, and the pPXF stellar velocity maps are shown in Figures~\ref{malin_kinem} and~\ref{ugc_kinem}.
-
-
-
 
 % Let's punt the APO spectra to the next paper--I don't think it adds much to this one anyway.
 %\subsection{Longslit spectra}
@@ -245,7 +238,7 @@ In addition to individual fibers, we have binned sets of three neighboring fiber
 
 By eye, GLSB systems resemble large faint spiral disks at large radii, and regular ellipticals at their centers.  In the SDSS DR10 \citep{Ahn14}, the Galaxy Zoo classifications \citep{Willett13} are spiral for Malin 1 and 2 and UGC 6614.  In this section, we compare the properties of the GLSB centers and disks with other systems.  
 
-\subsection{GLSB Centers}
+\subsection{GLSB Centers}\label{sec:centers}
 
 Both of our objects, as well as Malin 1, have been observed with SDSS, making it possible to compare them to a large number of systems.  The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.  
 
@@ -254,11 +247,10 @@ To make a comparison sample of galaxies from SDSS, we select galaxies with redsh
 % based on WMAP7+BAO+H0 mean
 %>>> fidcosmo
 %{'tau': 0.087, 'omega_n_0': 0.0, 'sigma_8': 0.809, 'h': 0.704, 'N_nu': 0, 'omega_lambda_0': 0.7274, 'n': 0.963, 'Y_He': 0.24, 'z_reion': 10.4, 'omega_b_0': 0.0456, 'omega_k_0': 0.0, 't_0': 13.75, 'omega_M_0': 0.2726}
-%xxx-clearly need to do a galfit to the central objects and show the residuals!  hmm, they are not well fit by simple Sersic profiles
 
 Figure~\ref{elliptical_relations} shows where the GLSBs fall on the major galaxy relations.  We use extinction corrected magnitudes and $k$-corrected colors \citep{Chilingarian10}.  Both of our GLSBs lie on the red-sequence in the color-magnitude diagram.  
 
-The central regions of GLSBs are often called ``bulges'', however, looking at Figure~\ref{elliptical_relations}, it is clear that these are much brighter than bulges of typical spiral galaxies and the centers of GLSBs are on the bright end of the red-sequence.  
+The central regions of GLSBs are often refered to in the literature as ``bulges'', however, looking at Figure~\ref{elliptical_relations}, it is clear that these are much brighter than bulges of typical spiral galaxies and the centers of GLSBs are on the bright end of the red-sequence.  
 
 \begin{figure*}
 \epsscale{.4}
@@ -273,62 +265,58 @@ We follow \citet{Bernardi03,Bernardi03b} in fitting fundamental plane parameters
 \begin{equation}
 \chi^2 = \log R_0 - a \log \sigma - b \log I_0 - c
 \end{equation}
-where $R_0$ is the effective radius, $\sigma$ is velocity dispersion in kilometers per second and $I_0$ is the surface brightness.  The resulting best-fit parameters are  a =1.376 , b = -0.661, c = -9.938.  We note that we have not made a rigorous volume-complete selection of galaxies, rather, simply galaxies with similar magnitudes, colors, and redshifts to our GLSBs.   See \citet{Saulder13} for a more rigorous analysis of the fundamental plane in SDSS. 
+where $R_0$ is the galaxy's effective radius, $\sigma$ is velocity dispersion in kilometers per second and $I_0$ is the surface brightness.  The resulting best-fit parameters are  a =1.376 , b = -0.661, c = -9.938.  We note that we have not made a rigorous volume-complete selection of galaxies, rather, simply galaxies with similar magnitudes, colors, and redshifts to our GLSBs.   See \citet{Saulder13} for a more rigorous analysis of the fundamental plane in SDSS. 
 
+\subsection{GLSB Disks}\label{sec:disks}
 
-\subsection{GLSB Disks}
+The diameters of GLSB disks are very large, with Malin~1's stellar disk detected out to a radius of 80 kpc \citep{Galaz15}.  Stellar disks are typically embedded in much larger \HI\ disks.  The size of the GLSB stellar disks is similar to the largest \HI\ disks observed in nearby galaxies, in support of the \citet{Mapelli08} model where the GLSB disks are the faded remnants of a normal \HI\ disk that has experienced a merger induced star-burst.  
 
-
-The diameters of GLSB disks are very large, with Malin~1's stellar disk detected out to a radius of 115 kpc \citep{Moore06} and 80 kpc \citep{Galaz15}.  Stellar disks are typically embedded in much larger \HI\ disks.  The size of the GLSB stellar disks is similar to the largest \HI\ disks observed in nearby galaxies, in support of the \citet{Mapelli08} model where the GLSB disks are the faded remnants of a normal \HI\ disk that has experienced a merger induced star-burst.  
-
-
-
-For comparison:  \citet{Williams13} trace star formation out to 11 disk scale lengths (radius of 22 kpc) in NGC 2403.  
+%For comparison, \citet{Williams13} trace star formation out to 11 disk scale lengths (radius of 22 kpc) in NGC 2403.  
 
 %Papers that have large \HI\ rotation curves that I might compare to:
 %\citet{DeBlok2008,Swaters09,Verheijen01}
 
-In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of  \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems unless an interaction is able to boost the \HI\ angular momentum.
+In Figure~\ref{disk_comp}, we compare the sizes of the stellar disks of the GLSB galaxies with other observations.  For this plot, we take the maximum detected radius from the literature for the galaxies.  It is possible that deeper observations could increase the values of $R_{max}$.  While UGC 6614 is close in size to the upper end of local \HI\ disks, Malin 1 and 2 are much larger than galaxies observed in the THINGS survey.  This seems to point against the GLSB formation mechanism of \citet{Mapelli08}, as we do not observe \HI\ disks large enough to convert into GLSB systems unless an interaction is able to boost the \HI\ angular momentum.
 
 %/astro/store/shared-scratch1/yoachim/Research/GLSB/THINGS/thingsplot.py
 \begin{figure*}
 \epsscale{.5}
 \plotone{Plots/things.eps}
 \epsscale{1}
-\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Galaz15}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1 XXX.  It is interesting to note that the \emph{stellar} disks of GLSB galaxies can be larger than the \HI\ disks of nearby systems.  \label{disk_comp}}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.  THINGS data taken from \citet{DeBlok2008}, Malin 1 from \citet{Galaz15}, Malin 2 and UGC 6614 from \citet{Pickering97}.  Here, $R_{max}$ is the maximum radius with an \HI\ detection for the THINGS galaxies, Malin~2, and UGC~6614 and the maximum radius with a stellar flux detection for Malin~1 XXX.  These are all maximum detection radii, and thus should be considered lower limits.  XXX--add in the stellar disks for Malin 2 and UGC 6614. \citet{Kasparova14} trace the light out to 60\arcsec on Malin~2, so 56 kpc\label{disk_comp}.  I trace UGC 6614 out to 65\arcsec, so 29 kpc.}
 \end{figure*}
 
 
-\section{Kinematics}
+\section{Kinematics}\label{sec:kinematics}
 
 %It would be nice to be able to use just the OII doublet to measure gas velocities from some of the galaxies.  Paper that discusses the range of OII ratio values in \citet{Wang04}.  Looks like it's usually around 0.5, but in low density regions it goes to 1.4.  Fuck.
 
-
-It might be nice to spin this as a chance to measure the DM halo of ellipticals to very large radii.  Some relevant papers for comparison:
-\citet{Weij09} use SAURON to get way out.  \citet{Proctor09} use Keck.  \citet{Murphy2011} use VP.
-
-%$R_e = 7.3$\arcsec for UGC06614\\
-%$R_e = 7.17$\arcsec for Malin2
-
-The kinematics of the extended GLSB disks represents a unique probe for measuring the extended dark matter halo of elliptical galaxies.  
+As we have shown in \S\ref{sec:centers} and \S\ref{sec:disks}, GLSB galaxies can be well described as large normal ellipticals that have managed to accrete a high angular momentum disk of stars and gas.  Given the total \HI mass in GLSBs, the accreted object is consistent with a much lower-mass gas-rich spiral.  If this is in fact the way GLSBs form, the disk kinematics represent a unique probe of the dark matter halo of elliptical galaxies.
 
 We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring model to the stellar kinematics.  For these fits, we hold the position angle and inclination fixed to values found from fitting the fiber-photometry.  Figures~\ref{malin_kinem} and~\ref{ugc_kinem} show the kinemetry fits and extracted rotation curves.  We iterate the fit, clipping residuals which deviate from the model by more than 250 \kms.  
 
 While we are making rather sweeping assumptions about the nature of the GLSB disks by fitting a simple disk with fixed position angle and inclination, the fits are quite good.  We also note that by observing disks, we do not have to worry about the velocity anisotropy parameter that traditionally makes dynamical modeling of ellipticals difficult.
 
-Notes on individual rotation curves:
-The Malin 2 rotation curve is rather complicated, having several abrupt rises.  This is especially strange given the very smooth photometric profile.  UGC 6614, on the other hand, has a relatively normal spiral galaxy-like rotation curve that rises linearly out to 10 kpc and then flattens.  
+The Malin 2 rotation curve (Figure~\ref{malin_kinem}) is rather complicated, having several abrupt rises.  This is especially strange given the very smooth photometric profile.  UGC 6614 (Figure~\ref{ugc_kinem}), on the other hand, has a relatively normal spiral galaxy-like rotation curve with a linear rise and flat outer region.  One important difference is that the linear rise extends for 10 kpc.
 
-The lack of rotation in the central regions of the galaxies is not particularly surprising, as this is the region that is flux-dominated by the central elliptical galaxy.  XXX-that hopefully we have data that shows they are not rotating or rotating in a different orientation.
+The lack of rotation in the central regions of the galaxies is not particularly surprising, as this is the region that is flux-dominated by the central elliptical galaxy.  
 
 The extracted rotation curves imply large dark matter halos.  For Malin 2, $V_{circ}\sim 280$ \kms at $R=42$ kpc implies a mass of $7.6\times 10^{11} \msun$ (compared to an SDSS stellar mass of $1.4\times 10^{11}$).  For UGC 6614, $V_{circ}\sim 200$ \kms at $R=17$ kpc gives a dynamical mass of $1.6\times 10^{11} \msun$ (compared to a stellar mass of $0.46\times 10^{11} \msun$ ).  
 
+Thus, using just the stellar kinematics, for Malin~2, we reach a radius of $\sim 6.2 R_e$, and find a dark matter fraction of 81\%.  For UGC 6614, we reach a radius of  $\sim 5.2 R_e$ and find a dark matter fraction of 71\%.  
+
+\citet{Murphy2011} are able to use IFU observations of M87 to reach $\sim2 R_e$ using just stellar data, and then rely on globular cluster kinematics to extended out to $5 R_e$ where they find a dark matter fraction of 85\%.  \citet{Weij09} is similarly able to use IFU observations to reach $\sim 4 R_e$ on two elliptical galaxies while \citet{Proctor09} reaches $\sim 3 R_e$ using multi-object spectroscopy.  
+
+
 %using /astro/store/shared-scratch1/yoachim/Research/GLSB/Analysis/mass_estm.pro
-If we use the circular speed of the \HI\ data, we end up with masses of $25\times 10^{11} \msun$ for Malin 2 and $6.5\times 10^{11} \msun$ for UGC 6614.  So that's dynamical to stellar mass ratios of 18 and 14 respectively.  Looks like they both have M$_{\rm{HI}}$ around 3-4 $10^{10} \msun$.  
+If we use the circular speed of the \HI\ data from the literature, we end up with masses of $25\times 10^{11} \msun$ for Malin 2 and $6.5\times 10^{11} \msun$ for UGC 6614.  So that's dynamical to stellar mass ratios of 18 and 14 respectively.  %Looks like they both have M$_{\rm{HI}}$ around 3-4 $10^{10} \msun$.  
 
-Thus, for Malin~2, we reach a radius of $\sim 6.2 R_e$, and find a dark matter fraction of 81\%.  For UGC 6614, we reach a radius of  $\sim 5.2 R_e$ and find a dark matter fraction of 71\%.  
 
-\citet{Murphy2011} reach $\sim2 R_e$ using just stellar data, and then rely on globular cluster kinematics to extended out to $5 R_e$.
+%Some relevant papers for comparison:
+%\citet{Weij09} use SAURON to get way out.  \citet{Proctor09} use Keck.  \citet{Murphy2011} use VP.
+%$R_e = 7.3$\arcsec for UGC06614\\
+%$R_e = 7.17$\arcsec for Malin2
+
 
 %XXX-crap, whatever happened to the gas kinematics?  There are emission lines out there--are they bright enough to get in single fibers of not?  Looks like for Malin 2 the emission lines are only coming from one side of the galaxy.  UGC 6614 is mostly emission from the center.
 
@@ -339,7 +327,7 @@ Thus, for Malin~2, we reach a radius of $\sim 6.2 R_e$, and find a dark matter f
 %re = [7.17, 7.3] ;effective radii in arcsec
 
 
-XXX-It would be great to get high resolution \HI\ observations of these systems since they could probably be higher spatial resolution.
+%XXX-It would be great to get high resolution \HI\ observations of these systems since they could probably be higher spatial resolution.
 
 XXX--We are currently observing higher spatial resolution IFU data with Gemini (GN-2015A-Q-75) of the central region of these galaxies to confirm they are normal elliptical galaxies and to help constrain a more sophisticated dynamical model.
 
