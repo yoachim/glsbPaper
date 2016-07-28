@@ -299,7 +299,7 @@ We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring m
 
 While we are making rather sweeping assumptions about the nature of the GLSB disks by fitting a simple disk with fixed position angle and inclination, the fits are quite good.  We also note that by observing disks, we do not have to worry about the velocity anisotropy parameter that traditionally makes dynamical modeling of ellipticals difficult.
 
-The Malin~2 rotation curve (Figure~\ref{malin_kinem}) is rather complicated, having several abrupt rises.  This is especially strange given the very smooth photometric profile.  UGC~6614 (Figure~\ref{ugc_kinem}), on the other hand, has a relatively normal spiral galaxy-like rotation curve with a linear rise and flat outer region.  One important difference is that the linear rise extends for 10 kpc.
+The Malin~2 rotation curve (Figure~\ref{malin_kinem}) is rather complicated, having several abrupt rises.  This is especially strange given the very smooth photometric profile.  UGC~6614 (Figure~\ref{ugc_kinem}), on the other hand, has a typical late-type galaxy rotation curve with a linear rise and flat outer region.  One important difference is that the linear rise extends for 10 kpc.
 
 The lack of rotation in the central regions of the galaxies is not particularly surprising, as this is the region that is flux-dominated by the central elliptical galaxy.  
 
@@ -311,7 +311,7 @@ Thus, using just the stellar kinematics, for Malin~2, we reach a radius of $\sim
 
 
 %using /astro/store/shared-scratch1/yoachim/Research/GLSB/Analysis/mass_estm.pro
-If we use the circular speed of the \HI\ data from the literature, we end up with masses of $25\times 10^{11} \msun$ for Malin 2 and $6.5\times 10^{11} \msun$ for UGC 6614.  So that's dynamical to stellar mass ratios of 18 and 14 respectively.  %Looks like they both have M$_{\rm{HI}}$ around 3-4 $10^{10} \msun$.  
+If we use the circular speed of the \HI\ data from the literature, we end up with dynamical masses of $25\times 10^{11} \msun$ for Malin~2 and $6.5\times 10^{11} \msun$ for UGC~6614 (dynamical to stellar mass ratios of 18 and 14 respectively).   %Looks like they both have M$_{\rm{HI}}$ around 3-4 $10^{10} \msun$.  
 
 %$R_e = 7.3$\arcsec for UGC06614\\
 %$R_e = 7.17$\arcsec for Malin2
@@ -330,43 +330,44 @@ If we use the circular speed of the \HI\ data from the literature, we end up wit
 
 \section{Star Formation Histories}
 
-Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3,-1.70,-0.70, -0.40, 0.0, or  0.40.  We do not include any metallicity evolution, as all the age bins in a given model has the same metallicity.  This gives us 361 unique non-zero model spectra. We use \citet{Bruzual03} with a Chabrier IMF to generate the model spectra. 
+Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the best fitting single model.  We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.  We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.  Each SFH can have a metallicity of [Z/H] = -2.3, -1.70, -0.70, -0.40, 0.0, or 0.40.  We do not include any metallicity evolution, as all the age bins in a given model have the same metallicity.  This gives us 361 unique non-zero model spectra. We use \citet{Bruzual03} with a Chabrier IMF to generate the model spectra. 
   
 
-Figures~\ref{malin2_binmap} and~\ref{ugc_binmap} show the fibers that were binned and the resulting spectra for Malin 2 and UGC 06614.  Both galaxies have elliptical-galaxy like spectra in their centers, with outskirts that have significant emission lines.  
+Figures~\ref{malin2_binmap} and~\ref{ugc_binmap} show the fibers that were binned and the resulting spectra for Malin 2 and UGC 06614.  Both galaxies have elliptical-galaxy like spectra in their centers, with outskirts that have significant emission lines.  We find the best-fitting single model spetrum for each observed binned spectrum. When fitting, we include a low order multiplicitave polynomial to match any dust extinction or flux calibration errors in the observations.  This means our fits are for the relative star formation histories, but not the absolute star formation rates (e.g., a model constant star formation history of 1 M$_\sun$ yr$^{-1}$ is an equally good fit as 10 M$_\sun$ yr$^{-1}$.)
 
 
-The best fitting star formation histories are shown in Figures~\ref{sfh_malin2} and~\ref{sfh_ugc}, while the best fitting stellar metallicities are shown in Figures~\ref{metal_malin2} and~\ref{metal_ugc}.  We find that {\emph{both galaxies have stellar populations dominated by old stars at all radii}}.  While the outer disks have emission lines and have spectra that are best fit with some current star formation, the total stellar mass is still overwhelmingly dominated by old stars.  Both galaxies also show very steep metallicity gradients, with centers that are super-solar metallicity (at the limit of our models), while the outer disks are both best fit by [Z/H]=-0.7.  
+The best fitting star formation histories are shown in Figures~\ref{sfh_malin2} and~\ref{sfh_ugc}, while the best fitting stellar metallicities are shown in Figures~\ref{metal_malin2} and~\ref{metal_ugc}.  We find that {\emph{both galaxies have stellar populations dominated by old stars at all radii}}.  While the outer disks show emission lines and are best fit with some current star formation, the total stellar mass is still overwhelmingly dominated by old stars.  Both galaxies also show very steep metallicity gradients, with centers that are super-solar metallicity (at the limit of our models), while the outer disks are both best fit by [Z/H]=-0.7.  
 
 A problem with fitting observed galaxy spectra with templates is that residuals between the model and data are dominated by non-Gaussian systematic effects such as template mis-match and improper parameterization of the SFH.  Since the residuals are non-Gaussian, there is no statistical formalism for generating uncertainties in the fit.  To generate our error bars, we look at the range of fits which have $\chi^2$ values within 100 of the minimum.  In many cases, this eliminates nearly all fits except for the minimum.  In these cases, we use the 4 best-fitting models to estimate the range of possible fits.  
 
-The dominance of an old stellar population at large radii seems to contradict the star-burst formation mechanism of \citet{Mapelli08}, and favor an accretion model where a galaxy already containing old stars is disrupted by a massive elliptical galaxy.  
+The dominance of an old stellar population at large radii seems to contradict the star-burst formation mechanism of \citet{Mapelli08}, and favor an accretion model where a galaxy already containing old stars is disrupted by a massive elliptical galaxy similar to \citet{Pen06}.  
 
 
-These are incredibly steep metallicity gradients.  The logarithmic gradients $\delta \rm{[Z/H]}\ \log{R/R_e}$ is $\sim -1.6$ for Malin 2 and $\sim -0.68$ for UGC 6614.  These are very steep compared to gradients typically observed in elliptical galaxies \citep{Greene12, Greene15}.  Other cites for elliptical gradients \citep{Kuntschner10}
+%\section{Disk Progenitors}
 
-\citet{Wilkinson15} find -0.15 dex/$R_e$ gradients for early type galaxies and flat metallitcity gradients for late type galaxies. 
+%It should be relatively easy to speculate about the galaxies that merged to form the disk. I can pull \HI\ masses, and then calc some stellar masses given the SDSS photometry and my own stellar M/L ratios.  Then given a baryonic mass and a typical stellar metallicity, it should be easy match that up to something.  Using baryonic TF relation, I'm getting pretty large $V_c$ values for what the accreted galaxy would have been.  I guess we could even speculate that this was a 3+ body encounter, so multiple gas rich systems that settle in.  That would help explain the low metallicities.  
 
-\section{Disk Progenitors}
+%Figure~\ref{thingsMHI} shows the total \HI\ mass for galaxies observed in the THINGS survey \citep{Walter2008}, along with the \HI\ masses for GLSB galaxies \citep{Pickering97}.  
 
-It should be relatively easy to speculate about the galaxies that merged to form the disk. I can pull \HI\ masses, and then calc some stellar masses given the SDSS photometry and my own stellar M/L ratios.  Then given a baryonic mass and a typical stellar metallicity, it should be easy match that up to something.  Using baryonic TF relation, I'm getting pretty large $V_c$ values for what the accreted galaxy would have been.  I guess we could even speculate that this was a 3+ body encounter, so multiple gas rich systems that settle in.  That would help explain the low metallicities.  
+%We can't really use the stellar luminosity of the disk to constrain the progenitor since there are signs of current {\emph in situ} star formation in the disks.  However, the very low stellar metallicities point to low-mass progenitors.  
 
-Figure~\ref{thingsMHI} shows the total \HI\ mass for galaxies observed in the THINGS survey \citep{Walter2008}, along with the \HI\ masses for GLSB galaxies \citep{Pickering97}.  
+%Hard to estimate what the progenitor system of the disks were.  Is there a good plot of disk \HI\ mass and metallicity out there?  Might even need to measure Lick indices to try and get everything on the same metallicity system.
 
-We can't really use the stellar luminosity of the disk to constrain the progenitor since there are signs of current {\emph in situ} star formation in the disks.  However, the very low stellar metallicities point to low-mass progenitors.  
+%These systems are rare enough, that one might imagine rather complicated scenarios for creating them.  For example, a three-body encounter could eject one galaxy while leaving a second in a nearly circular orbit.  Back of the envelope, a galaxy ejected at 5000 \kms would go 1.5 degrees per gigayear.  Even if the ejection was partly along the line of sight, it would be hard to find several gigayears later.  Unlike the collisional ring scenario where one would expect the galaxy that stimulated the ring formation to still be nearby.
 
-Hard to estimate what the progenitor system of the disks were.  Is there a good plot of disk \HI\ mass and metallicity out there?  Might even need to measure Lick indices to try and get everything on the same metallicity system.
 
-These systems are rare enough, that one might imagine rather complicated scenarios for creating them.  For example, a three-body encounter could eject one galaxy while leaving a second in a nearly circular orbit.  Back of the envelope, a galaxy ejected at 5000 \kms would go 1.5 degrees per gigayear.  Even if the ejection was partly along the line of sight, it would be hard to find several gigayears later.  Unlike the collisional ring scenario where one would expect the galaxy that stimulated the ring formation to still be nearby.
 
+
+\section{Discussion}
 
 The basic observational properties of GLSBs that need to be explained:
 \begin{enumerate}
-\item{These galaxies have \HI\ disks that extend much farther than typical spiral galaxies (Figure~\ref{disk_comp}). }
-\item{While GLSBs have large disks, the total \HI\ mass in these disks is lower than expected given their rotational velocities (Figure~\ref{thingsMHI})}
-\item{The central bulges are similar to elliptical galaxies in SDSS (Figure~\ref{elliptical_relations}).}
-\item{The stellar populations in the centers of GLSBs are old and very metal-rich.}
-\item{The stellar populations in the extended disks shows some signs of ongoing star formation, but is consistent with being dominated by an old metal-poor population.}
+\item{\HI\ disks that extend much farther than typical spiral galaxies (Figure~\ref{disk_comp}). }
+\item{Total \HI\ masses that are lower than expected given their rotational velocities (Figure~\ref{thingsMHI}).}
+\item{Central bulges that are similar to massive elliptical galaxies in SDSS (Figure~\ref{elliptical_relations}).}
+\item{Central stellar populations that are old and very metal-rich.}
+\item{Disk stellar populations that show signs of ongoing star formation, but are dominated by an old metal-poor population.}
+\item{A sharp metallicity transition between the central bulge and disk components.}
 \end{enumerate}
 
 %--now on new mac.  /Users/yoachim/Research/GLSB/THINGS/guess_projen.py
@@ -377,9 +378,6 @@ The basic observational properties of GLSBs that need to be explained:
 \caption{Comparison of GLSB \HI\ masses \citep{Pickering97} with \HI\ masses measured in the THINGS survey \citep{Walter2008}.  While the \HI\ masses in the GLSB systems are high, they are consistent with what would be available in a merger with a V$_{\rm{max}}\sim$110 km/s or smaller galaxy, assuming the merger did not trigger large amounts of star formation and feedback. \label{thingsMHI}}
 \end{figure*}
 
-\section{Discussion}
-
-XXX-organize this up a little more.
 
 We find that the centers of these two GLSB systems very closely resemble normal galaxies, with the extended faint disks being distinct components, consistent with the previous results for Malin~1 \citep{Barth07} and NGC~7589 \citep{Lelli10}. 
 
@@ -387,11 +385,15 @@ An accretion formation scenario does the best job explaining all the observation
 
 It also seems unlikely that GLSBs are just extreme versions of normal disk galaxies \citep{Das13}.  It's hard to imagine how such a large massive central spheroid could be formed without also disrupting the surrounding disk.  While the old stellar populations in the disks of Malin~2 and UGC~6614 are evidence against the \citet{Mapelli08} formation scenario, we have not addressed what collisional ring galaxies do evolve into.  Since photometric surveys are often surface brightness limited, it is possible a GLSB system will be found in the future that is the descendant of a collisional ring system.  
 
-
-
-One of the most important features we can see in our data is the sharp metallicity gradient as one transitions between the central region and the disk in both Malin~2 and UGC~6614 (Figures~\ref{metal_malin2} and~\ref{metal_ugc}).  For both galaxies, the best fitting star formation histories show the stellar populations are dominated by old stars inside and outside the transition, but the metallicity changes by $\sim0.7-1.0$ dex.  This is a very sharp gradient compared to what has been found in normal spirals for the bulge-to-disk transition region.  \citet{MacArthur09} spectroscopically observed a range of spiral galaxies and found the metallicity profiles which were dropping, rising, and flat.  Using broadband colors, \citet{MacArthur04} also found metallicity gradients were generally very shallow, with steep metallicity gradients only in very late-type spiral galaxies. Also note that our metallicity gradient could be an underestimate of the true gradient since the central metallicities are at the limits of our model grid, and we have spatially binned data, possibly washing out how sharp the transition is.
+One of the most important features we can see in our data is the sharp metallicity gradient as one transitions between the central region and the disk in both Malin~2 and UGC~6614 (Figures~\ref{metal_malin2} and~\ref{metal_ugc}).  For both galaxies, the best fitting star formation histories show the stellar populations are dominated by old stars inside and outside the transition, but the metallicity changes by $\sim0.7-1.0$ dex.  This is a very sharp gradient compared to what has been found in normal spirals for the bulge-to-disk transition region.  \citet{MacArthur09} spectroscopically observed a range of spiral galaxies and found the metallicity profiles which were dropping, rising, and flat.  Using broadband colors, \citet{MacArthur04} also found metallicity gradients were generally very shallow, with steep metallicity gradients only in very late-type spiral galaxies. Also note that our metallicity gradient could be an underestimate of the true gradient since the central metallicities are at the limits of our model grid (i.e., they could have metallicities greater than [Z/H]=0.7). We have also spatially binned data, possibly washing out how sharp the transition is between bulge and disk.
 
 \citet{Sanchez14} measure the Oxygen abundance from gas emission lines in a large sample of spiral galaxies and find a characteristic slope of $\alpha_{\rm{O/H}} = -0.1$\ dex $r_e^{-1}$ between 0.3 and 2 effective radii.  The metallicity gradients we observe in Malin~2 and UGC~6614 are factors of 2-4 steeper than the typical spiral. Also, of the 193 galaxies in \citet{Sanchez14} only four have a slope steeper than -0.3 \ dex $r_e^{-1}$ \citep[Figure~6]{Sanchez14}.  In their Figure~9, they combine the data to show a typical gas metallicity curve that drops linearly until $r_e\sim2$ and then flattens to a constant value.  This shape is very different from the step function change we observe in the GLSBs.
+
+
+These are incredibly steep metallicity gradients.  The logarithmic gradients $\delta \rm{[Z/H]}\ \log{R/R_e}$ is $\sim -1.6$ for Malin 2 and $\sim -0.68$ for UGC 6614.  These are very steep compared to gradients typically observed in elliptical galaxies \citep{Greene12, Greene15}.  Other cites for elliptical gradients \citep{Kuntschner10}
+
+\citet{Wilkinson15} find -0.15 dex/$R_e$ gradients for early type galaxies and flat metallitcity gradients for late type galaxies. 
+
 
 % malin 2: R_e = 7.17"
 % UGC : 7.3"
@@ -444,7 +446,7 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \epsscale{.5}
 \plotone{Plots/Malin2profile_fit.eps}
 \epsscale{1}
-\caption{Upper Left:  SDSS image of Malin 2.  Upper Right:  Image made with the VIRUS-P datacube.  Lower:  An exponential fit to the fiber magnitudes.  Red points show fibers that were clipped while the solid line shows the best-fit.  \label{Malin2_fibers} }
+\caption{Upper Left:  SDSS image of Malin 2.  Upper Right:  Image made with the VIRUS-P datacube synthetic fiber magnitudes.  Lower:  An exponential fit to the fiber magnitudes.  Red points show fibers that were clipped while the solid line shows the best-fit.  \label{Malin2_fibers} }
 \end{figure}
 
 
@@ -470,14 +472,26 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 %do an actual tilted ring fit to this shit.
 
 
+
 \begin{figure*}
 \epsscale{0.25}
 \plotone{Plots/dataMalin2.eps}\plotone{Plots/modelMalin2.eps}\plotone{Plots/data_modelMalin2.eps} \\
 \plotone{Plots/databinned_Malin2.eps}\plotone{Plots/modelbinned_Malin2.eps}\plotone{Plots/data_modelbinned_Malin2.eps}
 %\epsscale{.5}
 \epsscale{1}
+%\plottwo{Plots/kinembinned_Malin2.eps}{Plots/kinem_HI_binned_Malin2.eps}
+\caption{Upper panels show kinematics from individual fibers, lower panels show the results after fibers have been binned into tripples.  Left:  Stellar velocities measured with pPXF \citep{Cappellari04}. Middle:  Best fitting tilted ring model from kinemetry \citet{Krajn06}. Right: Best fit residuals.  \label{malin_kinem_fibers}}
+\end{figure*}
+
+
+\begin{figure*}
+\epsscale{0.25}
+%\plotone{Plots/dataMalin2.eps}\plotone{Plots/modelMalin2.eps}\plotone{Plots/data_modelMalin2.eps} \\
+%\plotone{Plots/databinned_Malin2.eps}\plotone{Plots/modelbinned_Malin2.eps}\plotone{Plots/data_modelbinned_Malin2.eps}
+%\epsscale{.5}
+\epsscale{1}
 \plottwo{Plots/kinembinned_Malin2.eps}{Plots/kinem_HI_binned_Malin2.eps}
-\caption{XXX--break this into 2 figures!  Fitting the line-of-sight velocity maps measured with Ppxf with the kinemetry package.  The dashed curve shows the expected stellar mass contribution to the rotation curve.  Vertical lines mark $R_e$ and $5R_e$.  \HI\ data from \citet{Pickering97}.  \label{malin_kinem}}
+\caption{Rotation curves extracted from the best fitting model in Fig~\ref{malin_kinem_fibers}.  The dashed curve shows the expected stellar mass contribution to the rotation curve.  Vertical lines mark $R_e$ and $5R_e$.  \HI\ data from \citet{Pickering97}.  \label{malin_kinem}}
 \end{figure*}
 
 
