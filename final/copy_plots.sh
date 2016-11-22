@@ -1,0 +1,37 @@
+cp ../Plots/Color_Magnitu_Diagram.eps .
+cp ../Plots/Faber_Jackson_Relation.eps .
+cp ../Plots/Fundamental_Plane.eps .
+cp ../Plots/mg_sigma.eps .
+cp ../Plots/things.eps .
+cp ../Plots/things_projenguess.eps .
+cp ../Plots/sdssbinned_Malin2.eps .
+cp ../Plots/Malin2mu.eps .
+cp ../Plots/dataMalin2.eps .
+cp ../Plots/modelMalin2.eps .
+cp ../Plots/data_modelMalin2.eps .
+cp ../Plots/databinned_Malin2.eps .
+cp ../Plots/modelbinned_Malin2.eps .
+cp ../Plots/data_modelbinned_Malin2.eps .
+cp ../Plots/kinembinned_Malin2.eps .
+cp ../Plots/kinem_HI_binned_Malin2.eps .
+cp ../Plots/Malin2bin_map.eps .
+cp ../Plots/Malin2binned_spec.eps .
+cp ../Plots/Malin2_chibar_sfr.eps .
+cp ../Plots/Malin2_chibar_z.eps .
+cp ../Plots/sdssbinned_UGC06614.eps .
+cp ../Plots/UGC06614mu.eps .
+cp ../Plots/UGC06614bin_map.eps .
+cp ../Plots/UGC06614binned_spec.eps .
+cp ../Plots/UGC06614_chibar_sfr.eps .
+cp ../Plots/UGC06614_chibar_z.eps .
+cp ../Plots/dataUGC06614.eps .
+cp ../Plots/modelUGC06614.eps .
+cp ../Plots/data_modelUGC06614.eps .
+cp ../Plots/databinned_UGC06614.eps .
+cp ../Plots/modelbinned_UGC06614.eps .
+cp ../Plots/data_modelbinned_UGC06614.eps .
+cp ../Plots/kinembinned_UGC06614.eps .
+cp ../Plots/kinem_HI_binned_UGC06614.eps .
+ cp ../Plots/Malin2profile_fit.eps .
+ cp ../Plots/UGC06614profile_fit.eps .
+ 
