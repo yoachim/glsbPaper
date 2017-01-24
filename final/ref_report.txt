@@ -1,0 +1,170 @@
+
+December 2, 2016
+
+Dr. Peter Yoachim
+University of Washington
+Astronomy Department
+Box 351580, UW
+Seattle, WA 98195
+
+
+Title: Giant Low Surface Brightness Galaxies As Merger Remnants
+
+Dear Dr. Yoachim,
+
+I have received the referee's report on your above submission to the The Astrophysical Journal, and appended it below. As you will see, the referee thinks that your article is interesting and that it will merit publication once you have addressed the issues raised in the report.
+
+Note also that the referee mentions a substantial overlap in text between this paper and a previous one. I confirm that this is indeed present in Section 2, which will need to be rewritten.
+
+When you resubmit the manuscript, please include a detailed cover letter containing the (mandatory) listing of the changes you've made to the text and your responses to the report. You may upload the list of changes as a file or add it to the text box.
+
+Click the link below to upload your revised manuscript;
+https://aas.msubmit.net/cgi-bin/main.plex?el=A4KO6BvV4A1BzD3J1A9ftdLr1gwDik40yVaozACmU8QZ
+Alternatively, you may also log into your account at the EJ Press web site, http://apj.msubmit.net. Please use your user's login name: pyoachim. You can then ask for a new password via the Unknown/Forgotten Password link if you have forgotten your password.
+
+Reviewers find it helpful if the changes in the text of the manuscript are easily distinguishable from the rest of the text. Therefore we ask you to print changes in bold face. The highlighting can be removed easily after the review.
+
+The AAS Journals have adopted a policy that manuscript files become inactive, and are considered to have been withdrawn, six months after the most recent referee's report goes to the authors, provided a revised version has not been received by that time.
+
+If you have any questions, feel free to contact me.
+
+Sincerely,
+Prof. Christopher J. Conselice
+ApJ Scientific Editor
+University of Nottingham
+Email: christopher.conselice@aas.org
+----------------------------------------------------------------------
+Referee Report
+
+The authors present spatially resolved spectroscopic observations of two Giant Low Surface Brightness Galaxies (GLSBs), and show that Malin 2 and UGC 6614 are consistent with being typical early-type galaxies, instead of late-type spiral galaxies as can been concluded from imaging data.
+
+The authors use stellar dynamics measurements to extract rotation curves using the kinemetry technique from Krajnovic et al. 2006, from which they constrain the dynamical mass out to large radii. From stellar population synthesis model fits to annular binned data they find that at all radii the stellar population are dominated by old stars, yet there are steep metallically gradients. From these results, they conclude that Malin 2 and UGC 6614 have undergone a high-angular momentum merger that formed the low surface brightness disk.
+
+The authors present an interesting study, but I feel that the current manuscripts is too low on details and there are several important issues that are only briefly mentioned. In general, I ask the authors (1) to explain their measurements in more detail, (2) describe what every Figure and Table is used for and what can be learned from it in both the main text and captions, and (3) expand on caveats that are highlighted below.
+
+I consider that the paper can be published after some major revisions. Below, I provide comments and questions that the author should take into consideration for this purpose.
+
+=======================================================================
+Main comments:
+
+1). This work seems heavily based on Yoachim et al. 2012, and some section have been copied almost one-to-one (Section 2). I would like to remind the authors of the AAS ethics policy at http://iopscience.iop.org/0004-637X/page/Ethics%20policy, where it is clearly stated that self-plagiarism is not acceptable. I would like to authors to have a critical review of the paper and rewrite any section that has considerable overlap to previous papers.
+
+2). The authors describe their stellar kinematic measurements in Section 2. I would like to have more details on the stellar kinematic fitting method, as it currently not possible for the reader to repeat these measurements. For example, were the spectra rebinned from linear to log-space? Were the templates resolution matched to the observed spectra? Was a sigma-clipping (CLEAN) performed, and are the LOSVD-errors directly taken from pPXF or was a Monte-Carlo simulations performed (as suggested in the pPXF description)? Please be also more specific as to how many and which templates were used.
+
+The stellar kinematics fits were performed on both the individual fibers and the super-fibres, yet no comparison between the two measurement is presented, whereas the binning clearly has an impact as is evident from Fig 5., 6., 14, and 15. Could the authors please include a comparison between the binned and unbinned data.
+
+3). There is no mention of the actual S/N of the individual spectra that are being fitted. Template mismatch is considered a serious problem when the S/N is lower than ~25 per Angstrom. Are the optimal templates derived on individual spaxels, or is there a pre-selection made? I also strongly suggest that the authors show examples of their best and worst spectra with the best-fit stellar kinematic and emission line fits so that the reader can assess the reliability of these results.
+
+4). In Section 2, the authors mention: "While pPXF fits the stellar velocity dispersion, our instrumental resolution is low enough (∼ 140 km s−1) that we are unable to make meaningful velocity dispersion measurements beyond the central fibers."
+
+Several studies have shown that the velocity dispersions can be reliably measured below the instrumental resolution. For example, for the SAURON and ATLAS 3D survey, that have spectra with a resolution of ~100 km s−1, Cappellari et al. (2011) show that the velocity dispersion can be recovered when the velocity dispersion is up to half the instrumental resolution. Fogarty et al. (2015) reach a similar conclusion for the SAMI galaxy survey.
+
+Thus, I would encourage the authors to show the velocity dispersion maps for all data with sigma_obs > 75 km s−1. The velocity dispersion maps could be used to confirm that these systems are indeed massive early-type galaxies. Table 1 already mentions the velocity dispersion, but it is unclear whether this is the velocity dispersion from their data or from the SDSS archive, and what aperture is being used. The velocity dispersion within one effective radius could for example be used to calculate the total dynamical mass using the Virial theorem (see e.g., Eq 19 from Cappellari et al. 2006). This would offer a nice comparison the stellar mass estimate, and the total dynamical mass estimate from the rotation curves and HI data.
+
+5). In Fig. 2 the authors show Rmax versus Vmax. I have objections to using these maximum radius values, as the authors themselves note that: "It is possible that deeper observations could increase the values of Rmax". I would argue that any quantity that changes with deeper observation cannot be a physical quantity, only an lower limit. Furthermore, from the de Blok et al. 2008, it is not clear to me which values the authors adopt, as I couldn't find any tabulated Rmax values in that paper. I suggest dropping Fig. 2 altogether.
+
+6). The kinemetry method by Krajnovic et al. 2006 is used to extract the rotation field. Again, a lot of crucial details are missing here, and I would urge the authors to explain carefully the choices that are made here. For example, why is the position angle fixed to values from fitting the fiber-photometry, and not to the kinematic position angle? How many rings are fitted? What coverage fraction is assumed? Are all moments (e.g., k1, k3, and k5) used to extract the rotation curve, or is only the k1 term used? I am also puzzled as to why the fit is iterated to clip outliers, as the higher terms in kinemetry should take this into account. If the velocity field is highly irregular due to measurement errors, this will result in a low k1, and high k5 term. Thus, I would ask the authors to abandon the interative-clipping, or justify this choice.
+
+Furthermore, the authors mention that they "are making rather sweeping assumptions about the nature of the GLSB disks by fitting a simple disk with fixed position angle and inclination", but I think that the authors might be misinterpreting the kinemetry method. The kinemetry method does not assume that the galaxy has a disk; it merely quantifies the rotation in harmonic terms. Please rephrase this paragraph.
+
+There is also no mention in this paper as to whether these galaxies are regular or non-regular rotators (see e.g., Krajnovic et al. 2008, 2011), which surprised me, as this is one of the main application of kinemetry. The authors should already have the k1 and k5 parameters in hand, so it would be trivial to add some discussion on this topic.
+
+7). In Section 5, I would like the authors to justify the choice of templates, in particular why only three age bins were chosen. The low number of age steps seems somewhat unconventional, and I would argue that the strongest stellar evolution occurs between 0 and 3 Gyr. This is why most stellar population models present their data in log-constant age steps. Also, why are the models limited to 12 Gyrs, when the current estimate of the age of the universe is 13.8? The authors also don't mention what software is being used to fit the data, please clarify this.
+
+Similar to the stellar kinematics, I think it would be useful to show the best-fitting templates and residuals in Fig 7. and Fig. 11.
+
+I found Fig. 8 and Fig. 12 difficult to interpret. I wonder if the legend is correct, because the authors mention that "both galaxies have stellar populations dominated by old stars at all radii", yet in Fig. 8, I see that most dominant population has an age between 0-10 Gyr. Instead, why don't the authors show a figure similar to Fig. 10 (bottom-row) from Yoachim et al. 2012, which is far more convincing and powerful.
+
+8). The authors mention that "a problem with fitting observed galaxy spectra with templates is that residuals between the model and data are dominated by non-Gaussian systematic effects such as template mismatch and improper parameterization of the SFH. Since the residuals are non-Gaussian, there is no statistical formalism for generating uncertainties in the fit."
+
+I'm a little surprised by this general statement without any reference. Are the authors saying that this is a problem for all work in this field, or that it is a problem with their data and fitting method. I disagree with the authors that there is no statistical formalism for generating uncertainties in the fits, as this can be done by Monte-Carlo simulations using the best-fitting model and reshuffling the residuals (see e.g., McDermid et al. 2015). The current approach that is taken here (Chi^2 values within 100 of the minimum), is poorly explained and does not meet the standards of this field.
+
+
+=======================================================================
+9). - Other comments about smaller issues, and style.
+
+A). Instead of using IFU (Integral Field Unit), please use IFS (Integral Field Spectrograph). An IFU is just one part of an IFS.
+
+B). The authors use a mix of galaxy classifications such as "normal elliptical galaxies" (abstract), "normal spirals" (introduction), "late-type spirals" (introduction), "normal red elliptical galaxies" (Fig 1.), "normal galaxies" (Section 6), and finally "normal disk galaxies" (Section 6).
+
+Given that these term are often interpreted very differently amongst reader, I would recommend a careful review of the paper to ensure that the authors use exactly the term they mean without ambiguity. I would suggest omitting the term "normal", and also switch to using early-type (elliptical E and lenticular S0) when the authors refer to normal ellipticals.
+
+C). The Figures for Malin 2 and UGC 6614 are presented as two separate sets, i.e., the authors first show the analysis for Malin 2 and then for UGC 6614, whereas in the text they are mentioned close together. I would suggest combining these figures where possible. For example, the following figures could be easily presented together, which would provide a better comparison between the two galaxies for the reader, and save space in the manuscript: Fig. 4 and 10, Fig. 6 and 15, Fig 8 and 12 , Fig. 9 and 13, etc.
+
+D). The authors use both UGC 06614 and UGC 6614. Please pick one.
+
+E). The authors mention that the Mitchell Spectrograph was formerly VIRUS-P, but they still use VIRUS-P in the manuscript on several occasions.
+
+F). The authors never refer to Table 1 and the description of Table 1 is insufficient. Please rewrite "The rest taken from SDSS", and also mention in more detail in the text how the stellar masses were calculated.
+
+G). The authors never refer to Table 2 and a description for Table 2 is missing.
+
+H). In the introduction, the authors conclude the following about the work by Kasparova et al. (2014): "this is not a particularly satisfying conclusion because one is then left with the mystery of why Malin 2's dark matter halo is so different from non-giant galaxies." With the new measurements presented here, can the authors please come back to this issue in the discussion?
+
+I). The authors mention that they use GANDALF to measure several emission lines, yet in the paper I don't see any application of the measured emission line data? Please mention clearly where this data is being used or omit this description from the paper.
+
+J). In Section 3.1: "The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them." Please be more specific. What is the SDSS pipeline surface brightness limit, and out to what radius does the pipeline measure the properties for both galaxies presented here.
+
+K). Please explain what the different contours mean in Fig 1, e.g., which contour encapsulates 68% (1-sigma) and 95% (2-sigma) of the data?
+
+L). Please include error bars in Fig. 1 for the three galaxies, and include a typical error bar for the SDSS galaxies.
+
+M). In Fig. 1, bottom left. Please explain why UGC 6614 1 appears to be an outlier.
+
+N). In Fig. 1, bottom right. Please explain why Malin 1 appears to be such an extreme outlier.
+
+O). Please add the exact dates of the observations in Section 2. What was the average seeing, how were the weather conditions, how many nights were observed, and what fraction of nights were lost due to weather, etc.
+
+P). Please also mention the total useful observation time for UGC 6614.
+
+Q). The fits to the fiber magnitudes in Fig. 4 and Fig. 10 are never mentioned in the text, and they appear to be unused in the paper. Please explain these fits in more detail in the text and explain their relevance or omit them from the paper.
+
+R). In Section 2 the authors mention that "Bad pixels are masked" but they do not explain how the bad pixels were detected.
+
+S). Section 2: "The fibers are adequately spaced". Please be more specific. What is the actual separation, for example in terms of the FWHM of the fiber PSF.
+
+T). Section 2: "Some observations were taken in non-photometric conditions". This should also be mentioned earlier when describing the observations.
+
+U). Section 2: The authors mention they use a 4th order multiplicative polynomial. Could the authors please justify why four is a good number, and not two or six?
+
+V). Section 3.1: "(and some morphology cuts)", "45,703 of which have red colors." Please be more specific in both cases.
+
+W). Section 3.1: "The central regions of GLSBs are often referred to in the literature as "bulges", Please include the references.
+
+X). Section 3.1: "The resulting best-fit parameters are a = 1.376 , b = −0.661, c = −9.938." Fig. 1 bottom left gives different values. Please update either the text or the figure to the correct numbers.
+
+Y). Section 3.1: Why do the authors fit the FP parameters themselves instead of adopting literature values from e.g. Bernardi et al. (2003a,b) when the sample presented here is likely not complete as the authors suggest themselves: "These are simply galaxies for comparison, not a rigorously defined volume-complete sample."
+
+Z). The authors mention the complicated rotation curve for Malin 2 in Section 4. They note that this is strange given the very smooth photometric profile. This issue requires a thorough explanation as to why this is the case.
+
+AA). Section 4: "The lack of rotation in the central regions of the galaxies". Could the authors please specify what they mean by lack of rotation, and compare this to for example rotation values as measured within similar apertures from e.g., ATLAS 3D or CALIFA galaxies?
+
+BB). Section 4: Please explain in more detail how the dynamical mass was calculated.
+
+CC). It's unclear what message the authors are tying to convey with the second to last paragraphs of Section 4: "Murphy et al. (2011) are .... multi-object spectroscopy."
+
+DD). Section 4 ends with the dynamical mass calculation using the HI data, but no comparison is made to the stellar kinematic measurements. Please add more discussion.
+
+EE). In Section 5, the authors mention: "we include a low order multiplicative polynomial". Please be specific; what polynomial was used and why was this order picked?
+
+FF). Please add a proper introduction to section 6, not just a single sentence and a listing of things that need to be explained.
+
+GG). Section 6: "An accretion formation scenario does the best job explaining all the observations." Do the authors really have ample evidence from both observations and simulation to make such a statement? If so, I feel that this needs a more thorough description of what is meant here. Also, galaxy mergers and their impact on the host galaxy have been studied in extensive detail. Please see Section 2. of Naab et al. 2014 for a detailed discussion of this topic from a simulation perspective.
+
+HH). Section 6: "While a collisional ring could fade to a GLSB,". Please first remind the reader of the simulations and results by Mapelli et al. 2008.
+
+II). In section 6, the authors mention that they consider the sharp metallicity gradient as one of the main results. I was surprised that there was no discussion of the age-metallicity-dust degeneracy.
+
+JJ). Section 6: The authors first mention the work by Sanchez et al. (2014) on the Oxygen abundance from gas emission lines, but then later comment with regards to the work by Kasparova et al. (2014) that "It is probably foolish to directly compare gas and stellar metallicities, but it is interesting that the gas metallicity gradient appears to be much lower than the stellar gradient."
+
+I agree with the authors that is does not make a lot of sense to compare gas and stellar metallicities, in particular when the dominant stellar population is older then 10 Gyr, and the gas is likely to be brought in by a recent merger. I would suggest leaving these paragraphs out of the discussion section.
+
+KK). Section 6: "These are incredibly steep metallicity gradients." It is unclear what metallicity gradients the authors refer to.
+
+LL). Section 6: The second-to-last paragraph seems to be disjoint from the gas-metallicity discussion. Perhaps the authors could try to add some background, or change the order of the discussion section?
+
+MM). Section 7: Is is really worth mentioning that the authors are currently observing these galaxies with Gemini in the Conclusion section? I suggest leaving this out of the paper as it does not add anything.
+
+=======================================================================
+
+
