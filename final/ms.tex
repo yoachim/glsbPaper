@@ -113,7 +113,7 @@ In \S\ref{sec:kinematics} and \S\ref{sec:sfh} we measure the stellar kinematics 
 \startdata
 Malin 1 & 1237661068728139925 & 0.083 & 16.70 & 1.86 & 177 &  10.9 & 11.1 \\
 Malin~2 & 1237667735572381852 &   0.046 & 14.34 & 7.17 & 202  &  10.6 & 11.3 \\
-UGC 06614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 &  10.5 & 10.9
+UGC 6614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 &  10.5 & 10.9
 \enddata
 \tablecomments{\HI\ masses updated to our adopted cosmological parameters from \citet{Pickering97}.
 The rest taken from SDSS. Stellar masses calculated from \citet{Conroy09}}
@@ -130,7 +130,7 @@ The rest taken from SDSS. Stellar masses calculated from \citet{Conroy09}}
 \label{fitted_params}}    
 \startdata
 Malin~2 & 6.1 & 35.5  \\
-UGC 06614 & 5.7 & 33.4
+UGC 6614 & 5.7 & 33.4
 \enddata
 \end{deluxetable}
 
@@ -148,7 +148,7 @@ The spectrograph images the spectrum of each fiber on a 2048$\times$2048 Fairchi
 For each galaxy, observations were taken at three unique dither positions to provide nearly complete spatial coverage.
 Individual science exposures were 30 minutes.
 Malin~2 had 10 exposures per dither position (11 exposures for dither position 1), for a total of 15 hours of exposure time.
-Observations of UGC 06614 had alignment issues between observing runs.
+Observations of UGC 6614 had alignment issues between observing runs.
 This resulted in a deep stack of 6 exposures, and a shallow stack with only 2 exposures.
 With only 2 exposures, cosmic ray rejection becomes unreliable, therefore, we use these shallow frames when looking at the surface brightness profiles, but use only the aligned deep co-add when analyzing the stellar kinematics and stellar populations. Twilight flat field frames, bias frames, and wavelength calibration Hg and Cd lamps were taken during the day.
 Flux standard stars were observed in twilight.
@@ -192,7 +192,7 @@ Because our data do not extend out to \ha, we cannot use the Balmer decrement to
 While pPXF fits the stellar velocity dispersion, our instrumental resolution is low enough ($\sim140$ \kms) that we are unable to make meaningful velocity dispersion measurements beyond the central fibers.
 
 
-In addition to individual fibers, we have binned sets of three neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers. The fiber surface brightnesses are plotted in Figures~\ref{Malin2_fibers} and~\ref{ugc_fibers}, and the pPXF stellar velocity maps are shown in Figures~\ref{malin_kinem} and~\ref{ugc_kinem}.
+In addition to individual fibers, we have binned sets of three neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers. The fiber surface brightnesses are plotted in Figure~\ref{galaxy_fibers}, and the pPXF stellar velocity maps are shown in Figure~\ref{gal_kinem}.
 
 
 
@@ -284,16 +284,16 @@ If this is in fact the way GLSBs form, the disk kinematics represent a unique pr
 
 We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring model to the stellar kinematics.
 For these fits, we hold the position angle and inclination fixed to values found from fitting the fiber-photometry.
-Figures~\ref{malin_kinem} and~\ref{ugc_kinem} show the kinemetry fits and extracted rotation curves.
+Figure~\ref{gal_kinem} show the kinemetry fits and extracted rotation curves.
 We iterate the fit, clipping residuals which deviate from the model by more than 250 \kms.
 
 
 While we are making rather sweeping assumptions about the nature of the GLSB disks by fitting a simple disk with fixed position angle and inclination, the fits are quite good.
 We also note that by observing disks, we do not have to worry about the velocity anisotropy parameter that traditionally makes dynamical modeling of ellipticals difficult.
 
-The Malin~2 rotation curve (Figure~\ref{malin_kinem}) is rather complicated, having several abrupt rises.
+The Malin~2 rotation curve (Figure~\ref{gal_kinem}) is rather complicated, having several abrupt rises.
 This is especially strange given the very smooth photometric profile.
-UGC~6614 (Figure~\ref{ugc_kinem}), on the other hand, has a typical late-type galaxy rotation curve with a linear rise and flat outer region.
+UGC~6614, on the other hand, has a typical late-type galaxy rotation curve with a linear rise and flat outer region.
 One important difference is that the linear rise extends for 10 kpc.
 
 The lack of rotation in the central regions of the galaxies is not particularly surprising, as this is the region that is flux-dominated by the central elliptical galaxy.
@@ -327,13 +327,13 @@ We do not include any metallicity evolution, as all the age bins in a given mode
 This gives us 361 unique non-zero model spectra. We use \citet{Bruzual03} with a Chabrier IMF to generate the model spectra. 
   
 
-Figures~\ref{malin2_binmap} and~\ref{ugc_binmap} show the fibers that were binned and the resulting spectra for Malin~2 and UGC 06614.
+Figure~\ref{gal_binmap} shows the fibers that were binned and the resulting spectra for Malin~2 and UGC 6614.
 Both galaxies have elliptical-galaxy like spectra in their centers, with outskirts that have significant emission lines.
 We find the best-fitting single model spectrum for each observed binned spectrum. When fitting, we include a low order multiplicative polynomial to match any dust extinction or flux calibration errors in the observations.
 This means our fits are for the relative star formation histories, but not the absolute star formation rates (e.g., a model constant star formation history of 1 M$_\sun$ yr$^{-1}$ is an equally good fit as a constant 10 M$_\sun$ yr$^{-1}$.)
 
 
-The best fitting star formation histories are shown in Figures~\ref{sfh_malin2} and~\ref{sfh_ugc}, while the best fitting stellar metallicities are shown in Figures~\ref{metal_malin2} and~\ref{metal_ugc}.
+The best fitting star formation histories are shown in Figure~\ref{sfh_gals}, while the best fitting stellar metallicities are shown in Figure~\ref{metal_gals} .
 We find that {\emph{both galaxies have stellar populations dominated by old stars at all radii}}.
 While the outer disks show emission lines and are best fit with some current star formation, the total stellar mass is still overwhelmingly dominated by old stars.
 Both galaxies also show very steep metallicity gradients, with centers that are super-solar metallicity (at the limit of our models), while the outer disks are both best fit by [Z/H]=-0.7.
@@ -386,7 +386,7 @@ While the old stellar populations in the disks of Malin~2 and UGC~6614 are evide
 Since photometric surveys are often surface brightness limited, it is possible a GLSB system will be found in the future that is the descendant of a collisional ring system.
 
 
-One of the most important features we can see in our data is the sharp metallicity gradient as one transitions between the central region and the disk in both Malin~2 and UGC~6614 (Figures~\ref{metal_malin2} and~\ref{metal_ugc}).
+One of the most important features we can see in our data is the sharp metallicity gradient as one transitions between the central region and the disk in both Malin~2 and UGC~6614 (Figure~\ref{metal_gals}).
 For both galaxies, the best fitting star formation histories show the stellar populations are dominated by old stars inside and outside the transition, but the metallicity changes by $\sim0.7-1.0$ dex.
 This is a very sharp gradient compared to what has been found in late-type spirals for the bulge-to-disk transition region.
 \citet{MacArthur09} spectroscopically observed a range of spiral galaxies and found the metallicity profiles which were dropping, rising, and flat.
@@ -447,21 +447,16 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 
 
 \begin{figure}
-\plottwo{sdssbinned_Malin2.eps}{Malin2mu.eps}
-\epsscale{.5}
-\plotone{Malin2profile_fit.eps}
+\epsscale{.33}
+\plotone{sdssbinned_Malin2.eps}\plotone{Malin2mu.eps}\plotone{Malin2profile_fit.eps}
+\plotone{sdssbinned_UGC06614.eps}\plotone{UGC06614mu.eps}\plotone{UGC06614profile_fit.eps}
 \epsscale{1}
-\caption{Upper Left:  SDSS image of Malin~2.
-Upper Right:  Image made with the VIRUS-P datacube synthetic fiber magnitudes.
-Lower:  An exponential fit to the fiber magnitudes.
-Red points show fibers that were clipped while the solid line shows the best-fit.
-\label{Malin2_fibers} }
+\caption{Left:  SDSS images of Malin~2 and UGC 6614.
+Middle:  Images made with the VIRUS-P datacube synthetic fiber magnitudes.
+Right:  Exponential fits to the fiber magnitudes.
+Red points show fibers that were clipped while the solid lines show the best-fits.
+\label{galaxy_fibers} }
 \end{figure}
-
-
-
-
-
 
 
 
@@ -476,97 +471,6 @@ Left:  Stellar velocities measured with pPXF \citep{Cappellari04}. Middle:  Best
 \label{malin_kinem_fibers}}
 \end{figure*}
 
-
-\begin{figure*}
-\epsscale{0.25}
-\epsscale{1}
-\plottwo{kinembinned_Malin2.eps}{kinem_HI_binned_Malin2.eps}
-\caption{Rotation curves extracted from the best fitting models in Fig~\ref{malin_kinem_fibers}.
-The dashed curves show the expected stellar mass contribution to the rotation curve.
-Vertical lines mark $R_e$ and $5R_e$.
-Right panel includes \HI\ data from \citet{Pickering97}.
-\label{malin_kinem}}
-\end{figure*}
-
-
-
-\begin{figure}
-\plottwo{Malin2bin_map.eps}{Malin2binned_spec.eps}
-\caption{Left:  Map of which fibers were binned together for star formation history measurements.
-Right:  Resulting binned spectra, residuals from the bright skyline at 5577\AA\ have been masked.
-The inner bins show strong Mg, Fe, and Ca absorption features, while the outer bins have \hb\ and \ion{O}{3} emission lines. \label{malin2_binmap}}
-\end{figure}
-
-
-\begin{figure}
-\epsscale{.5}
-\plotone{Malin2_chibar_sfr.eps}
-\epsscale{1}
-\caption{ Best fitting star formation histories.
-For each bin, the SFH is normalized by the peak at each radius.
-Error bars are based on $\Delta\chi^2=100$ or the best fitting 4 models, whichever provides more points.
-The oldest age bin dominates at all radii.
-\label{sfh_malin2} }
-\end{figure}
-
-
-\begin{figure}
-\epsscale{.5}
-\plotone{Malin2_chibar_z.eps}
-\epsscale{1}
-\caption{Best fitting stellar metallicities.
- Dashed line shows the maximum model metallicity used in the models (minimum is below the y range limit).
-Error bars are as in Figure~\ref{sfh_malin2}.
-\label{metal_malin2}}
-\end{figure}
-
-
-\begin{figure}
-\plottwo{sdssbinned_UGC06614.eps}{UGC06614mu.eps}
-\epsscale{0.5}
-\plotone{UGC06614profile_fit.eps}
-\epsscale{1}
-\caption{Upper Left:  SDSS image of UGC 06614.
-Upper Right:  Image made with the VIRUS-P datacube.
-Lower:  An exponential fit to the fiber magnitudes.
-Red points show fibers that were clipped while the solid line shows the best-fit.
-We only included fibers beyond the outer ring structure.
-\label{ugc_fibers} }
-\end{figure}
-
-
-
-\begin{figure}
-\plottwo{UGC06614bin_map.eps}{UGC06614binned_spec.eps}
-\caption{Left:  Map showing which fibers were binned for UGC~6614.
-Right:  The binned spectra, color-coded to match the map on the left.
-As with Malin~2, the inner spectra show strong metallicity absorption features while the outer spectra show emission lines. \label{ugc_binmap}}
-\end{figure}
-
-
-
-\begin{figure}
-\epsscale{.5}
-\plotone{UGC06614_chibar_sfr.eps}
-\caption{Best fitting star formation histories.
-For each bin, the SFH is normalized by the peak bin.
-Error bars are based on $\Delta\chi^2=100$ or the 4 best fitting models, whichever provides more points.
-As with Malin~2, old stars dominate at all radii.
-\label{sfh_ugc} }
-\epsscale{1}
-\end{figure}
-
-
-\begin{figure}
-\epsscale{.5}
-\plotone{UGC06614_chibar_z.eps}
-\epsscale{1}
-\caption{Best fitting stellar metallicities for the binned UGC~6614 spectra.
-Dashed line shows the maximum model value.
-\label{metal_ugc}}
-\end{figure}
-
-
 \begin{figure*}
 \epsscale{0.25}
 \plotone{dataUGC06614.eps}\plotone{modelUGC06614.eps}\plotone{data_modelUGC06614.eps} \\
@@ -577,14 +481,45 @@ Left:  Stellar velocities measured with pPXF \citep{Cappellari04}. Middle:  Best
 \label{ugc_kinem_fibers}}
 \end{figure*}
 
+
 \begin{figure*}
 \epsscale{1}
+\plottwo{kinembinned_Malin2.eps}{kinem_HI_binned_Malin2.eps}
 \plottwo{kinembinned_UGC06614.eps}{kinem_HI_binned_UGC06614.eps}
-\caption{Rotation curves extracted from the best fitting model in Fig~\ref{ugc_kinem_fibers}.
-The dashed curve shows the expected stellar mass contribution to the rotation curve.
+\caption{Rotation curves extracted from the best fitting models in Figures~\ref{malin_kinem_fibers} and~\ref{ugc_kinem_fibers}.
+The dashed curves show the expected stellar mass contribution to the rotation curve.
 Vertical lines mark $R_e$ and $5R_e$.
-Right panel includes \HI\ data from \citet{Pickering97}. \label{ugc_kinem}}
+Right panel includes \HI\ data from \citet{Pickering97}.
+\label{gal_kinem}}
 \end{figure*}
+
+
+\begin{figure}
+\plottwo{Malin2bin_map.eps}{Malin2binned_spec.eps}
+\plottwo{UGC06614bin_map.eps}{UGC06614binned_spec.eps}
+\caption{Left:  Maps of which fibers were binned together for star formation history measurements.
+Right:  Resulting binned spectra, residuals from the bright skyline at 5577\AA\ have been masked.
+For both galaxies, the inner bins show strong Mg, Fe, and Ca absorption features, while the outer bins have \hb\ and \ion{O}{3} emission lines. \label{gal_binmap}}
+\end{figure}
+
+
+\begin{figure}
+\plottwo{Malin2_chibar_sfr.eps}{UGC06614_chibar_sfr.eps}
+\caption{ Best fitting star formation histories.
+For each bin, the SFH is normalized by the peak at each radius.
+Error bars are based on $\Delta\chi^2=100$ or the best fitting 4 models, whichever provides more points.
+The oldest age bin dominates at all radii.
+\label{sfh_gals} }
+\end{figure}
+
+
+\begin{figure}
+\plottwo{Malin2_chibar_z.eps}{UGC06614_chibar_z.eps}
+\caption{Best fitting stellar metallicities.
+ Dashed line shows the maximum model metallicity used in the models (minimum is below the y range limit).
+Error bars are as in Figure~\ref{sfh_gals}.
+\label{metal_gals}}
+\end{figure}
 
 
 \clearpage
