@@ -111,12 +111,12 @@ In \S\ref{sec:kinematics} and \S\ref{sec:sfh} we measure the stellar kinematics 
      &  \colhead{(DR 10)}   &     &  \colhead{(mag)}    & \colhead{arcsec} & \colhead{\kms} & \colhead{log$_{10}$M$_{\odot}$} & \colhead{log$_{10}$M$_{\odot}$}
 \label{basic_prop}}    
 \startdata
-Malin 1 & 1237661068728139925 & 0.083 & 16.70 & 1.86 & 177 &  10.9 & 11.1 \\
+Malin~1 & 1237661068728139925 & 0.083 & 16.70 & 1.86 & 177 &  10.9 & 11.1 \\
 Malin~2 & 1237667735572381852 &   0.046 & 14.34 & 7.17 & 202  &  10.6 & 11.3 \\
 UGC 6614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 &  10.5 & 10.9
 \enddata
 \tablecomments{\HI\ masses updated to our adopted cosmological parameters from \citet{Pickering97}.
-The rest taken from SDSS. Stellar masses calculated from \citet{Conroy09}}
+Redshift and photometric measurements from SDSS. Stellar masses calculated from \citet{Conroy09}}
 \end{deluxetable}
 
 
@@ -184,30 +184,27 @@ The FWHM of reduced arc lamp images is 5.3 \AA, giving us a resolution of $R\sim
 The fiber-to-fiber changes in resolution are less than 10\%.
 
 
-With our final reduced data cubes, we used Penalized Pixel-Fitting (pPXF) \citep{Cappellari04} and Gas AND Absorption Line Fitting (GANDALF) \citep{Sarzi06} on each fiber to fit stellar velocities, stellar dispersions, and emission line velocities and fluxes.
+With our final reduced data cubes, we used Penalized Pixel-Fitting (pPXF) \citep{Cappellari04} on each fiber to fit stellar velocities, stellar dispersions, and emission line velocities and fluxes.
 For stellar templates we use a suite of SSP spectra from \citet{Bruzual03}.
-We use GANDALF to measure the [\ion{O}{2}] doublet, [\ion{O}{3}] doublet, and the higher order Balmer lines \hb, H$\gamma$, H$\delta$, H$\epsilon$ while masking the night skyline at 5577 \AA.
-The fit also includes a 4th degree multiplicative polynomial to correct for any dust or flux calibration mis-match between the observations and templates.
-Because our data do not extend out to \ha, we cannot use the Balmer decrement to place tight constraints on the dust extinction.
 While pPXF fits the stellar velocity dispersion, our instrumental resolution is low enough ($\sim140$ \kms) that we are unable to make meaningful velocity dispersion measurements beyond the central fibers.
 
-
 In addition to individual fibers, we have binned sets of three neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers. The fiber surface brightnesses are plotted in Figure~\ref{galaxy_fibers}, and the pPXF stellar velocity maps are shown in Figure~\ref{gal_kinem}.
-
-
 
 \section{Comparisons to Other Galaxies}\label{sec:compare_gals}
 
 By eye, GLSB systems resemble large faint spiral disks at large radii, and regular ellipticals at their centers.
-In the Sloan Digital Sky Survey Data Release 10 (SDSS DR10) \citep{Ahn14}, the Galaxy Zoo classifications \citep{Willett13} are spiral for Malin 1, Malin 2, and UGC~6614.
+In the Sloan Digital Sky Survey Data Release 10 (SDSS DR10) \citep{Ahn14}, the Galaxy Zoo classifications \citep{Willett13} are spiral for Malin~1, Malin~2, and UGC~6614.
 In this section, we compare the properties of the GLSB centers and disks with other systems.
-
+In Table~\ref{basic_prop}, we list the basic properties of out target GLSB systems. Table~\ref{basic_prop} includes stellar masses for the systems XXX--add discussion of where those stellar masses come from. Need to figure out which version of FSPS model I actually copied. %http://skyserver.sdss.org/dr10/en/help/browser/browser.aspx?cmd=description+stellarMassFSPSGranEarlyDust+U#&&history=description+stellarMassFSPSGranEarlyDust+U
+% 
 
 \subsection{GLSB Centers}\label{sec:centers}
 
 Both of our objects, as well as Malin~1, have been observed with SDSS, making it possible to compare them to a large number of systems.
-The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them.
+The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them. 
+XXX-looks like the blue arm in Malin~2 gets shredded into a few dozen objects, as does the ring in UGC~6614.
 
+\citet{Bakos12} find that standard SDSS imaging reaches a S/N$\sim1$ per pixel at a surface brightness of 25 mag arcsec$^{-2}$, brighter than most GLSB disk components.
 
 To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddened $r$ magnitude between 13.5 and 17.7.
 When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology cuts).
@@ -237,6 +234,7 @@ Top Left:  The color-magnitude diagram for 141,000 galaxies of similar redshift 
 Top Right:  The Faber-Jackson relation for 45,700 SDSS galaxies, along with a best-fit line.
 Left:  The $r$-band fundamental plane from SDSS along with our GLSB galaxies and best-fit line.
 Bottom Right:  The relation between central velocity dispersion and the Mg2 absorption feature.
+Contours are drawn which enclose 5\% to 85\% of the data with 20\% steps.
  From the point of view of the SDSS data reduction pipeline, GLSB galaxies appear as relatively red elliptical galaxies on the red-sequence.
 \label{elliptical_relations}}
 \end{figure*}
@@ -284,6 +282,7 @@ If this is in fact the way GLSBs form, the disk kinematics represent a unique pr
 
 We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring model to the stellar kinematics.
 For these fits, we hold the position angle and inclination fixed to values found from fitting the fiber-photometry.
+Our fiber-photometry fits are listed in Table~\ref{fitted_params}. XXX--add more details to what I did here.
 Figure~\ref{gal_kinem} show the kinemetry fits and extracted rotation curves.
 We iterate the fit, clipping residuals which deviate from the model by more than 250 \kms.
 
@@ -406,6 +405,8 @@ These are very steep compared to gradients typically observed in elliptical gala
 
 \citet{Kasparova14} present one of the most in depth observational studies of Malin~2.
 Mass-modeling the system, they find that a huge isothermal core with $r_c=27.3$ kpc best fits the dynamics.
+XXX--address how our new interpretation of the formation of the system as a merger remnant could help solve the discrepancy with that huge isothermal core. 
+XXX--rather than being an outlier late-type disk, they are probing the outskirts of an early-type galaxy, where wonky dark matter profiles are common xxx-cite Amy's paper, etc.
 \citet{Kasparova14} also measure gas metallicities and find the metallicity drops from solar in the center of the system to half-solar at $r=30$\ kpc.
 It is probably foolish to directly compare gas and stellar metallicities, but it is interesting that the gas metallicity gradient appears to be much lower than the stellar gradient.
 This is probably consistent with a low metallicity gas-rich galaxy merging with an elliptical system that has much higher stellar metallicity, although a detailed simulation would be helpful in confirming what the final expected gas metallicity gradient should be.
@@ -419,7 +420,7 @@ If these systems do prove to be ellipticals with accreted high angular momentum 
 
 \section{Conclusions}\label{sec:conclusions}
 
-We have observed two giant low surface brightness galaxies with the VIRUS-P IFS.
+We have observed two giant low surface brightness galaxies with the Mitchell Spectrograph IFS.
 We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.
 We find the inner bulge is similar to elliptical galaxies found in SDSS.
 The extended galaxy stars have disk-like velocity fields, are dominated by old stars, but do show signs of ongoing star formation. The stars also show a sharp metallicity transition, consistent with the disk forming independently of the bulge. The \HI\ mass of the disk is also consistent with coming from a low-mass accreted galaxy.
@@ -428,7 +429,7 @@ We are currently observing higher spatial resolution IFS data with Gemini (GN-20
 
 %--------------------------------------
 \acknowledgments
-Thanks to Dave Doss and the staff at McDonald Observatory for their help on these observing runs. Thanks to Dmitry Bizyaev for stimulating conversations about GLSBs. Thanks to Lauren MacArthur for discussions on stellar metallicity gradients. Thanks to the anonymous referee for a very thorough and prompt report which improved the paper.
+Thanks to Dave Doss and the staff at McDonald Observatory for their help on these observing runs. Thanks to Dmitry Bizyaev for stimulating conversations about GLSBs. Thanks to Lauren MacArthur for discussions on stellar metallicity gradients. We thank the anonymous referee for a very thorough and amazingly prompt report which improved the paper.
 
 VPD is supported by STFC Consolidated grant \#ST/M000877/1.
 
@@ -452,7 +453,7 @@ SDSS-III is managed by the Astrophysical Research Consortium for the Participati
 \plotone{sdssbinned_UGC06614.eps}\plotone{UGC06614mu.eps}\plotone{UGC06614profile_fit.eps}
 \epsscale{1}
 \caption{Left:  SDSS images of Malin~2 and UGC 6614.
-Middle:  Images made with the VIRUS-P datacube synthetic fiber magnitudes.
+Middle:  Images made with the Mitchell Spectrograph datacube synthetic fiber magnitudes.
 Right:  Exponential fits to the fiber magnitudes.
 Red points show fibers that were clipped while the solid lines show the best-fits.
 \label{galaxy_fibers} }
