@@ -1,0 +1,641 @@
+\documentclass[12pt,preprint]{aastex}
+%\documentclass{emulateapj}
+\usepackage{url}
+%\usepackage{natbib}
+%\usepackage{xspace}
+\def\arcsec{$^{\prime\prime}$}
+\bibliographystyle{aasjournal}
+\newcommand\degree{{^\circ}}
+\newcommand\surfb{$\mathrm{mag}/\square$\arcsec}
+\newcommand\Gyr{\rm{~Gyr}}
+\newcommand\msun{\rm{M}_\odot}
+\newcommand\kms{km s$^{-1}$}
+\newcommand\al{$\alpha$}
+\newcommand\ha{$\rm{H}\alpha$}
+\newcommand\hb{$\rm{H}\beta$}
+\newcommand\HI{\ion{H}{1}}
+
+
+\shorttitle{GLSB as Merger Remnants}
+\shortauthors{Yoachim et al.}
+
+\begin{document}
+
+\title{Giant Low Surface Brightness Galaxies As Merger Remnants}
+
+
+\author{Peter Yoachim\altaffiliation{Department of Astronomy, University of Washington, Box 351580,
+Seattle WA, 98195}, Denise Schmitz\altaffiliation{California Institute of Technology}, Sarah Loebman\altaffiliation{}, SungWon Kwak\altaffiliation{Center for the Exploration of the Origin of the Universe
+(CEOU), Department of Physics \& Astronomy, Seoul
+National University, Seoul 151-742, Republic of Korea}altaffilmark{Korea Astronomy and Space Science Institute, Daejeon 305-348, Republic of Korea}, Victor P. Debattista\altaffiliation{Jeremiah Horrocks Institute, University of Central Lancashire, Preston PR1 2HE, UK.}
+  }
+
+
+\begin{abstract}
+We present IFS observations of the giant low surface brightness galaxies Malin~2 and UGC~6614.
+We fit the stellar dynamics of these systems and compare their spatially resolved spectra to star formation history models.
+We argue that Malin~2 and UGC~6614 are early-type elliptical galaxies that have undergone high angular momentum mergers which formed their GLSB disks, making them unique systems for probing the dark matter halos of elliptical systems.
+We find the stellar dynamics are consistent with earlier measurements of the GLSB \HI\ disks.
+The stellar populations of the GLSB disks are dominated by old metal-poor stars, while the central ellipticals are metal rich.
+
+\end{abstract}
+\keywords{galaxies: kinematics and dynamics --- galaxies: formation --- galaxies: structure}
+
+
+\section{Introduction}
+
+Since the discovery of Malin~1 \citep{Bothun87}, giant low surface brightness galaxies (GLSB) have presented a unique problem for galaxy formation theories.
+Low surface brightness (LSB) galaxies are typically defined as disks with central surface brightnesses fainter than 23 $B$ mag arcsec$^2$.
+While LSB galaxies span a wide range of sizes and masses, the few giant low surface brightness that have been discovered seem to be unrelated objects that are at least an order of magnitude larger in extent than typical LSB systems. 
+
+Observers tend to classify GLSB systems as late-type spirals.
+\citet{Matthews01b} list Malin~2 as an Scd while \citet{Das13} conclude that GLSB systems are an extreme form of late type spiral galaxies.
+Similarly, \citet{Kasparova14} claim that the large dark matter scale of Malin~2 can explain it's features.
+Even the Galaxy Zoo project \citep{Willett13}  classifies GLSB galaxies as spirals.
+While GLSB systems superficially resemble late-type spiral galaxies, they are clearly extreme outliers when their scale lengths are compared to other galaxy samples, being around a factor of 2 larger than the largest spirals \citep[Figure~4]{Dalcanton97}. 
+
+The disks in GLSB systems are incredibly large, with Malin~1 being detected in $R$-band to a radius of over 100 kpc \citep{Moore06}.
+Disks of this size are a challenge for typical $\Lambda$CDM cosmology galaxy formation theories and more exotic formation scenarios have been proposed for GLSB systems.
+\citet{Mapelli08} form GLSB-like galaxies in simulations via the fading of collisional ring galaxies.
+In their model, a collision sets off an expanding ring of star formation.
+As the star formation subsides and the stellar population ages, the ring galaxy fades over $\sim$100 Myr to resembles observed GLSBs.
+One obvious problem with this scenario is that most GLSB's are relatively isolated, and thus there are no obvious candidates for the impactor systems that would have triggered the star formation burst.
+
+
+The other popular formation scenario for GLSB systems is that they are galaxies that undergo a high angular momentum minor merger where the LSB disk is the shredded remains of an accreted galaxy.
+\citet{Pen06} find that extended disks can be formed via the disruption of dwarf galaxies.
+These simulated debris disks have exponential profiles and extend out to 200 kpc from the central galaxy.
+
+Observations of Malin~1 support the accretion model of GLSBs.
+\citet{Barth07} analyzes HST imaging of Malin~1 and find that the central object is well described as an early-type barred galaxy that was previously unresolved in ground-based imaging. \citet{Barth07} points out that extended disk structures in galaxies such as M31 appear to be a smooth continuation of the inner disk \citep{Ferguson02}, while Malin~1's extended disk is better described as a distinct component, (although \citet{Ibata05} claim M31's extended disk is of accretion origin).
+
+
+If GLSB disks are indeed the remains of accreted dwarf galaxies, they represent a unique opportunity to observationally probe the outer regions of galaxy dark matter halos, especially if they form around elliptical galaxies.
+The mass profiles of elliptical galaxies have been difficult to constrain since they lack the extended \HI\ disks found around spirals.
+As an example of how difficult it can be to measure the outer regions of elliptical galaxy kinematics, \citet{Murphy2011} model M87 out to $\sim$23 kpc with stellar kinematics and out to 51 kpc with globular clusters (or $R=4.8 R_e$, where $R_e$ is the effective radius). \citet{Raskutti14} are also limited to measuring kinematics out to $\sim$2-5 $R_e$.
+
+
+In comparison, the stellar disk of Malin~2 extends beyond 40 kpc (5.9 $R_e$), and the HI disk reaches beyond 100 kpc (14.8 $R_e$).
+\citet{Galaz15} take deep images of Malin~1 and find the stellar disk diameter extends to 160 kpc.
+
+
+In one of the most extensive studies of a GLSB system, \citet{Kasparova14} combine ARC 3.5m photometry and long-slit spectra with Gemini spectra to mass-model Malin~2.
+They find the broadband colors of the extended disk are not consistent with a catastrophic formation, but are best fit by an exponentially declining SFH.
+They speculate the main difference between Malin~2 and non-giant LSB galaxies is the dark matter halo scale.
+To some extent, this is not a particularly satisfying conclusion because one is then left with the mystery of why Malin~2's dark matter halo is so different from non-giant galaxies.
+
+
+In \S\ref{sec:obs} we present new observations of Malin~2 and UGC~6614. In \S\ref{sec:compare_gals}, we compare the general properties of GLSB galaxies to samples of galaxies drawn from the Sloan Digital Sky Survey (SDSS) and  The \HI Nearby Galaxy Survey (THINGS).
+In \S\ref{sec:kinematics} and \S\ref{sec:sfh} we measure the stellar kinematics and star formation histories from our spectra. In \S\ref{sec:discussion}, we discuss what our observations imply for the possible formation mechanisms for GLSB systems.
+
+
+
+\begin{deluxetable}{l l c c c c c c}
+%\tabletypesize{\small \footnotesize \scriptsize}
+\tabletypesize{\small}
+%\rotate
+\tablewidth{0pt}
+%\tablenum{num}
+%\tablecolumns{num}
+%\tableheadfrac{num}
+\tablecaption{Basic Properties of GLSB Galaxies}
+\tablehead{
+\colhead{Name} & \colhead{SDSS ID}   &  \colhead{z}  &\colhead{$r$}  & \colhead{$R_e$} 
+& \colhead{$\sigma$}  & \colhead{\HI\ Mass} & \colhead{Stellar Mass} \\
+     &  \colhead{(DR 10)}   &     &  \colhead{(mag)}    & \colhead{arcsec} & \colhead{\kms} & \colhead{log$_{10}$M$_{\odot}$} & \colhead{log$_{10}$M$_{\odot}$}
+\label{basic_prop}}    
+\startdata
+Malin~1 & 1237661068728139925 & 0.083 & 16.70 & 1.86 & 177 &  10.9 & 11.1 \\
+Malin~2 & 1237667735572381852 &   0.046 & 14.34 & 7.17 & 202  &  10.6 & 11.3 \\
+UGC 6614 & 1237668585435365393 &  0.021 & 13.52 & 7.3 & 150 &  10.5 & 10.9
+\enddata
+\tablecomments{\HI\ masses updated to our adopted cosmological parameters from \citet{Pickering97}.
+Redshift and photometric measurements from SDSS. Stellar masses calculated from \citet{Conroy09}}
+\end{deluxetable}
+
+
+\begin{deluxetable}{l c c }
+\tabletypesize{\small}
+\tablewidth{0pt}
+\tablecaption{Fitted Structural Properties}
+\tablehead{
+\colhead{Name} & \colhead{$h_r$}   &  \colhead{inclination}    \\
+     &  \colhead{(arcsec)}   & \colhead{(deg)}      
+\label{fitted_params}}    
+\startdata
+Malin~2 & 6.1 & 35.5  \\
+UGC 6614 & 5.7 & 33.4
+\enddata
+\end{deluxetable}
+
+
+
+\section{Observations}\label{sec:obs}
+
+We obtained spatially resolved spectroscopy of our target galaxies using the Mitchell Spectrograph (formerly VIRUS-P)\citep{Hill08} on the 2.7m Harlan J. Smith telescope at McDonald Observatory.
+Observations were made during dark time in February, March, and April 2010.
+Identical instrument setups were used for all observations.
+The Mitchell Spectrograph with the VP-2 IFS (Integral Field Spectrograph) bundle used here has a square array of 246 optical fibers which sample the 1.9\arcmin$\times$1.9\arcmin\ field-of-view with a 1/3 filling factor, with each fiber having a diameter of 4.23\arcsec.
+The spectrograph images the spectrum of each fiber on a 2048$\times$2048 Fairchild Imaging CCD.
+
+
+For each galaxy, observations were taken at three unique dither positions to provide nearly complete spatial coverage.
+Individual science exposures were 30 minutes.
+Malin~2 had 10 exposures per dither position (11 exposures for dither position 1), for a total of 15 hours of exposure time.
+Observations of UGC 6614 had alignment issues between observing runs.
+This resulted in a deep stack of 6 exposures, and a shallow stack with only 2 exposures.
+With only 2 exposures, cosmic ray rejection becomes unreliable, therefore, we use these shallow frames when looking at the surface brightness profiles, but use only the aligned deep co-add when analyzing the stellar kinematics and stellar populations. Twilight flat field frames, bias frames, and wavelength calibration Hg and Cd lamps were taken during the day.
+Flux standard stars were observed in twilight.
+
+
+
+We use the Mitchell Spectrograph software pipeline Vaccine \citep{Adams2011} to perform basic reduction tasks.
+Vaccine subtracts the over-scan region and generates and subtracts a bias frame.
+Bad pixels are masked.
+Twilight flats and arc lamps from each night are combined.
+The combined flat frame is used to trace the spatial profile of each fiber and correct for pixel-to-pixel variation.
+The combined arc lamp is used to fit a wavelength solution for each fiber.
+We use a 4th order polynomial and find the wavelength solutions have a typical RMS of 0.06-0.2 \AA\ ($\sim0.1$ pixel).
+Vaccine then masks potential cosmic rays and collapses each fiber to a one dimensional spectrum.
+The fibers are adequately spaced, and our targets are predominately low surface brightness, so we find making a fiber cross-talk correction unnecessary.
+
+Once the Vaccine routines are completed we make the following additional reductions using standard IRAF routines and custom IDL scripts.
+The reduced twilight frames are used to generate a fiber-to-fiber flux correction (similar to a longslit illumination correction).
+We use the b-spline procedure described in \citet{Kelson03} to generate background frames.
+The corners of the IFS array contain enough empty fibers to measure the sky background in each exposure.
+Because we bin fibers together, imperfect sky-subtraction represents a serious source of potential systematic errors.
+
+
+The spectra are then rectified to a common wavelength scale, and the photo-spectroscopic standards are used to flux calibrate the spectra and correct for atmospheric extinction.
+The spectra are then velocity shifted to the Local Standard of Rest.
+Images taken at identical dither positions are averaged together with outlier rejection to eliminate any remaining cosmic rays.
+Some observations were taken in non-photometric conditions, so before combining frames we scale them to a common average flux level.
+
+
+Our final reduced data for each galaxy includes 738 spectra spanning a 1.9\arcmin$\times$1.9\arcmin\ field-of-view.
+The spectra have a wavelength range of $\sim$3550-5840 with 2.2 \AA\ pixels (with some fibers only reaching 5500 \AA\ due to the warping of the trace).
+The FWHM of reduced arc lamp images is 5.3 \AA, giving us a resolution of $R\sim700-1000$.
+The fiber-to-fiber changes in resolution are less than 10\%.
+
+
+With our final reduced data cubes, we used Penalized Pixel-Fitting (pPXF) \citep{Cappellari04} on each fiber to fit stellar velocities, stellar dispersions, and emission line velocities and fluxes.
+For stellar templates we use a suite of SSP spectra from \citet{Bruzual03}.
+While pPXF fits the stellar velocity dispersion, our instrumental resolution is low enough ($\sim140$ \kms) that we are unable to make meaningful velocity dispersion measurements beyond the central fibers.
+
+In addition to individual fibers, we have binned sets of three neighboring fibers together to boost the signal-to-noise ratio and run pPXF on these super-fibers. The fiber surface brightnesses are plotted in Figure~\ref{galaxy_fibers}, and the pPXF stellar velocity maps are shown in Figure~\ref{gal_kinem}.
+
+\section{Comparisons to Other Galaxies}\label{sec:compare_gals}
+
+By eye, GLSB systems resemble large faint spiral disks at large radii, and regular ellipticals at their centers.
+In the Sloan Digital Sky Survey Data Release 10 (SDSS DR10) \citep{Ahn14}, the Galaxy Zoo classifications \citep{Willett13} are spiral for Malin~1, Malin~2, and UGC~6614.
+In this section, we compare the properties of the GLSB centers and disks with other systems.
+In Table~\ref{basic_prop}, we list the basic properties of out target GLSB systems. Table~\ref{basic_prop} includes stellar masses for the systems XXX--add discussion of where those stellar masses come from. Need to figure out which version of FSPS model I actually copied. %http://skyserver.sdss.org/dr10/en/help/browser/browser.aspx?cmd=description+stellarMassFSPSGranEarlyDust+U#&&history=description+stellarMassFSPSGranEarlyDust+U
+% 
+
+\subsection{GLSB Centers}\label{sec:centers}
+
+Both of our objects, as well as Malin~1, have been observed with SDSS, making it possible to compare them to a large number of systems.
+The outer disks of GLSBs are faint enough that the SDSS photometric pipeline effectively ignores them. 
+XXX-looks like the blue arm in Malin~2 gets shredded into a few dozen objects, as does the ring in UGC~6614.
+
+\citet{Bakos12} find that standard SDSS imaging reaches a S/N$\sim1$ per pixel at a surface brightness of 25 mag arcsec$^{-2}$, brighter than most GLSB disk components.
+
+To make a comparison sample of galaxies from SDSS, we select galaxies with redshifts between 0.01 and 0.07 and de-reddened $r$ magnitude between 13.5 and 17.7.
+When comparing to just elliptical galaxies we make the additional color-cut of $u-r > 2.1$ (and some morphology cuts).
+These are simply galaxies for comparison, not a rigorously defined volume-complete sample.
+Our full SQL queries are shown in \S\ref{SQL}.
+This gives us a sample of 141,001 objects, 45,703 of which have red colors.
+Throughout, we use the CosmoloPy\footnote{\url{http://roban.github.com/CosmoloPy/}} fiducial cosmology ($h=0.704$, $\Omega_{m_0}=0.2726$, $\Omega_{\lambda_0}=0.7274$).
+Note that we are not correcting for Malmquist bias or biases in the SDSS spectroscopic selection criteria.
+Our selection is simply for galaxies of a similar magnitude and redshift.
+
+
+Figure~\ref{elliptical_relations} shows where the GLSBs fall on the major galaxy relations.
+We use extinction corrected magnitudes and $k$-corrected colors \citep{Chilingarian10}.
+Both of our GLSBs lie on the red-sequence in the color-magnitude diagram.
+
+
+The central regions of GLSBs are often referred to in the literature as ``bulges'', however, looking at Figure~\ref{elliptical_relations}, it is clear that these are much brighter than bulges of typical spiral galaxies and the centers of GLSBs are on the bright end of the red-sequence.
+
+
+\begin{figure*}
+\epsscale{.4}
+\plotone{Color_Magnitu_Diagram.eps}\plotone{Faber_Jackson_Relation.eps}\\
+\plotone{Fundamental_Plane.eps}\plotone{mg_sigma.eps}
+\epsscale{1}
+\caption{
+Top Left:  The color-magnitude diagram for 141,000 galaxies of similar redshift and magnitude as Malin~2 and UGC~6614.
+Top Right:  The Faber-Jackson relation for 45,700 SDSS galaxies, along with a best-fit line.
+Bottom Left:  The $r$-band fundamental plane from SDSS along with our GLSB galaxies and best-fit line. 
+UGC~6614 is a slight outlier, but still within the 85\% contour.
+Bottom Right:  The relation between central velocity dispersion and the Mg2 absorption feature.
+Malin~1 is appears to be a metal-rich outlier. 
+Contours are drawn which enclose 5\% to 85\% of the data with 20\% steps.
+ From the point of view of the SDSS data reduction pipeline, GLSB galaxies appear as relatively red elliptical galaxies on the red-sequence.
+\label{elliptical_relations}}
+\end{figure*}
+
+We follow \citet{Bernardi03,Bernardi03b} in fitting fundamental plane parameters to our selected SDSS galaxies.
+We fit the fundamental plane by minimizing $\chi^2$ in, 
+\begin{equation}
+\chi^2 = \log R_0 - a \log \sigma - b \log I_0 - c
+\end{equation}
+where $R_0$ is the galaxy's effective radius, $\sigma$ is velocity dispersion in kilometers per second and $I_0$ is the surface brightness.
+The resulting best-fit parameters are  $a =1.376$ , $b = -0.661$, $c = -9.938$.
+We note that we have not made a rigorous volume-complete selection of galaxies, rather, simply selected galaxies with similar magnitudes, colors, and redshifts to our GLSBs.
+ See \citet{Saulder13} for a more rigorous analysis of the fundamental plane in SDSS. 
+
+\subsection{GLSB Disks}\label{sec:disks}
+
+
+The diameters of GLSB disks are very large, with Malin~1's stellar disk detected out to a radius of 80 kpc \citep{Galaz15}.
+Stellar disks are typically embedded in much larger \HI\ disks.
+In Figure~\ref{disk_comp}, we compare the sizes of the stellar and \HI\ disks of the GLSB galaxies with other observations.
+For this plot, we take the maximum detected radius from the literature for the galaxies.
+It is possible that deeper observations could increase the values of $R_{max}$.
+While the stellar disk of UGC~6614 is close in size to local observed \HI\ disks, Malin~1 and~2 are larger than the \HI\ disks observed in the THINGS survey.
+This seems to point against the GLSB formation mechanism of \citet{Mapelli08}, as we do not observe \HI\ disks in late-type spirals large enough to convert into GLSB systems unless an interaction is able to also boost the angular momentum of the resulting stellar disk.
+
+
+\begin{figure*}
+\epsscale{.5}
+\plotone{things.eps}
+\epsscale{1}
+\caption{ Comparison of the GLSB disks with other galaxy disks from the literature.
+THINGS data taken from \citet{DeBlok2008}, GLSB \HI\ data from Malin 1 from \citet{Pickering97} and GLSB stellar radii from \citet{Galaz15}, \citet{Kasparova14}, and this paper.
+Here, $R_{max}$ is the maximum radius with an \HI\ or optical detection.
+For the GLSB galaxies, the circular points show the maximum \HI\ detection radius and stars-shaped points show the maximum detected stellar light radius.
+All points are maximum detection radii, and thus should be considered lower limits.
+ \label{disk_comp}}
+\end{figure*}
+
+
+\section{Kinematics}\label{sec:kinematics}
+
+As we have shown in \S\ref{sec:centers} and \S\ref{sec:disks}, GLSB galaxies can be well described as massive early-type galaxies that have managed to accrete a high angular momentum disk of stars and gas.
+Given the total \HI\ mass in GLSBs, the accreted object is consistent with a much lower-mass gas-rich spiral.
+If this is in fact the way GLSBs form, the disk kinematics represent a unique probe of the dark matter halo of elliptical galaxies.
+
+We use the kinemetry package presented in \citet{Krajn06} to fit a tilted-ring model to the stellar kinematics.
+For these fits, we hold the position angle and inclination fixed to values found from fitting the fiber-photometry.
+Our fiber-photometry fits are listed in Table~\ref{fitted_params}. XXX--add more details to what I did here.
+Figure~\ref{gal_kinem} show the kinemetry fits and extracted rotation curves.
+We iterate the fit, clipping residuals which deviate from the model by more than 250 \kms.
+
+
+While we are making rather sweeping assumptions about the nature of the GLSB disks by fitting a simple disk with fixed position angle and inclination, the fits are quite good.
+We also note that by observing disks, we do not have to worry about the velocity anisotropy parameter that traditionally makes dynamical modeling of ellipticals difficult.
+
+The Malin~2 rotation curve (Figure~\ref{gal_kinem}) is rather complicated, having several abrupt rises.
+This is especially strange given the very smooth photometric profile.
+UGC~6614, on the other hand, has a typical late-type galaxy rotation curve with a linear rise and flat outer region.
+One important difference is that the linear rise extends for 10 kpc.
+
+The lack of rotation in the central regions of the galaxies is not particularly surprising, as this is the region that is flux-dominated by the central elliptical galaxy.
+
+
+The extracted rotation curves imply large dark matter halos.
+For Malin~2, $V_{circ}\sim 280$ \kms at $R=42$ kpc implies a mass of $7.6\times 10^{11} \msun$ (compared to an SDSS stellar mass of $1.4\times 10^{11}$).
+For UGC~6614, $V_{circ}\sim 200$ \kms at $R=17$ kpc gives a dynamical mass of $1.6\times 10^{11} \msun$ (compared to a stellar mass of $0.46\times 10^{11} \msun$ ).
+
+
+Thus, using just the stellar kinematics, for Malin~2, we reach a radius of $\sim 6.2 R_e$, and find a dark matter fraction of 81\%.
+For UGC~6614, we reach a radius of  $\sim 5.2 R_e$ and find a dark matter fraction of 71\%.
+
+
+\citet{Murphy2011} are able to use IFS observations of M87 to reach $\sim2 R_e$ using just stellar data, and then rely on globular cluster kinematics to extended out to $5 R_e$ where they find a dark matter fraction of 85\%.
+\citet{Weij09} is similarly able to use IFS observations to reach $\sim 4 R_e$ on two elliptical galaxies while \citet{Proctor09} reaches $\sim 3 R_e$ using multi-object spectroscopy.
+
+
+
+If we use the circular speed of the \HI\ data from the literature, we end up with dynamical masses of $25\times 10^{11} \msun$ for Malin~2 and $6.5\times 10^{11} \msun$ for UGC~6614 (dynamical to stellar mass ratios of 18 and 14 respectively).
+
+
+
+\section{Star Formation Histories}\label{sec:sfh}
+
+Following the work in \citet{Yoachim10,Yoachim12}, we generate a suite of model galaxy SEDs using relatively simple star formation histories and find the single best fitting model.
+We break the star formation history into three age bins, 0-10 Gyr, 10-11.5 Gyr, and 11.5-12 Gyr.
+We assume each age bin has a constant star formation with a level of 0, 0.5, 1, or 10 solar-masses per year.
+Each SFH can have a metallicity of [Z/H] = -2.3, -1.70, -0.70, -0.40, 0.0, or 0.40.
+We do not include any metallicity evolution, as all the age bins in a given model have the same metallicity.
+This gives us 361 unique non-zero model spectra. We use \citet{Bruzual03} with a Chabrier IMF to generate the model spectra. 
+  
+
+Figure~\ref{gal_binmap} shows the fibers that were binned and the resulting spectra for Malin~2 and UGC 6614.
+Both galaxies have elliptical-galaxy like spectra in their centers, with outskirts that have significant emission lines.
+We find the best-fitting single model spectrum for each observed binned spectrum. When fitting, we include a low order multiplicative polynomial to match any dust extinction or flux calibration errors in the observations.
+This means our fits are for the relative star formation histories, but not the absolute star formation rates (e.g., a model constant star formation history of 1 M$_\sun$ yr$^{-1}$ is an equally good fit as a constant 10 M$_\sun$ yr$^{-1}$.)
+
+
+The best fitting star formation histories are shown in Figure~\ref{sfh_gals}, while the best fitting stellar metallicities are shown in Figure~\ref{metal_gals} .
+We find that {\emph{both galaxies have stellar populations dominated by old stars at all radii}}.
+While the outer disks show emission lines and are best fit with some current star formation, the total stellar mass is still overwhelmingly dominated by old stars.
+Both galaxies also show very steep metallicity gradients, with centers that are super-solar metallicity (at the limit of our models), while the outer disks are both best fit by [Z/H]=-0.7.
+
+
+A problem with fitting observed galaxy spectra with templates is that residuals between the model and data are dominated by non-Gaussian systematic effects such as template mis-match and improper parameterization of the SFH.
+Since the residuals are non-Gaussian, there is no statistical formalism for generating uncertainties in the fit.
+To generate our error bars, we look at the range of fits which have $\chi^2$ values within 100 of the minimum.
+In many cases, this eliminates nearly all fits except for the minimum.
+In these cases, we use the 4 best-fitting models to estimate the range of possible parameters.
+
+
+The dominance of an old stellar population at large radii seems to contradict the star-burst formation mechanism of \citet{Mapelli08}, and favor an accretion model where a galaxy already containing old stars is disrupted by a massive elliptical galaxy similar to \citet{Pen06}.
+
+
+
+
+
+\section{Discussion}\label{sec:discussion}
+
+The basic observational properties of GLSBs that need to be explained:
+\begin{enumerate}
+\item{\HI\ disks that extend much farther than typical spiral galaxies (Figure~\ref{disk_comp}). }
+\item{Total \HI\ masses that are lower than expected given their rotational velocities (Figure~\ref{thingsMHI}).}
+\item{Central bulges that are similar to massive elliptical galaxies in SDSS (Figure~\ref{elliptical_relations}).}
+\item{Central stellar populations that are old and very metal-rich.}
+\item{Disk stellar populations that show signs of ongoing star formation, but are dominated by an old metal-poor population.}
+\item{A sharp metallicity transition between the central bulge and disk components.}
+\end{enumerate}
+
+\begin{figure*}
+\epsscale{0.5}
+\plotone{things_projenguess.eps}
+\epsscale{1}
+\caption{Comparison of GLSB \HI\ masses \citep{Pickering97} with \HI\ masses measured in the THINGS survey \citep{Walter2008}.
+While the \HI\ masses in the GLSB systems are high, they are consistent with what would be available in a merger with a V$_{\rm{max}}\sim$110 km/s or smaller galaxy, assuming the merger did not trigger large amounts of star formation and feedback. \label{thingsMHI}}
+\end{figure*}
+
+
+We find that the centers of these two GLSB systems very closely resemble typical early-type galaxies, with the extended faint disks being distinct components, consistent with the previous results for Malin~1 \citep{Barth07} and NGC~7589 \citep{Lelli10}. 
+
+An accretion formation scenario does the best job explaining all the observations.
+While a collisional ring could fade to a GLSB, the stellar population should be relatively young, and one would not necessarily expect a steep metallicity gradient.
+Also, there are no obvious galaxies near GLSBs to act as progenitor colliders.
+
+
+It also seems unlikely that GLSBs are just extreme versions of late-type disk galaxies \citep{Das13}.
+It's hard to imagine how such a large massive central spheroid could be formed without also disrupting the surrounding disk.
+While the old stellar populations in the disks of Malin~2 and UGC~6614 are evidence against the \citet{Mapelli08} formation scenario, we have not addressed what collisional ring galaxies do evolve into.
+Since photometric surveys are often surface brightness limited, it is possible a GLSB system will be found in the future that is the descendant of a collisional ring system.
+
+
+One of the most important features we can see in our data is the sharp metallicity gradient as one transitions between the central region and the disk in both Malin~2 and UGC~6614 (Figure~\ref{metal_gals}).
+For both galaxies, the best fitting star formation histories show the stellar populations are dominated by old stars inside and outside the transition, but the metallicity changes by $\sim0.7-1.0$ dex.
+This is a very sharp gradient compared to what has been found in late-type spirals for the bulge-to-disk transition region.
+\citet{MacArthur09} spectroscopically observed a range of spiral galaxies and found the metallicity profiles which were dropping, rising, and flat.
+Using broadband colors, \citet{MacArthur04} also found metallicity gradients were generally very shallow, with steep metallicity gradients only in very late-type spiral galaxies. Also note that our metallicity gradient could be an underestimate of the true gradient since the central metallicities are at the limits of our model grid (i.e., they could have metallicities greater than [Z/H]=0.7). We have also spatially binned data, possibly diluting how sharp the transition is between bulge and disk.
+
+\citet{Sanchez14} measure the Oxygen abundance from gas emission lines in a large sample of spiral galaxies and find a characteristic slope of $\alpha_{\rm{O/H}} = -0.1$\ dex $r_e^{-1}$ between 0.3 and 2 effective radii.
+The metallicity gradients we observe in Malin~2 and UGC~6614 are factors of 2-4 steeper than the typical spiral. Also, of the 193 galaxies in \citet{Sanchez14} only four have a slope steeper than -0.3 \ dex $r_e^{-1}$ \citep[Figure~6]{Sanchez14}.
+In their Figure~9, they combine the data to show a typical gas metallicity curve that drops linearly until $r_e\sim2$ and then flattens to a constant value.
+This shape is very different from the step function change we observe in GLSBs.
+
+
+These are incredibly steep metallicity gradients.
+The logarithmic gradients $\delta \rm{[Z/H]}\ \log{R/R_e}$ is $\sim -1.6$ for Malin~2 and $\sim -0.68$ for UGC~6614.
+These are very steep compared to gradients typically observed in elliptical galaxies \citep{Kuntschner10, Greene12, Greene15}.
+\citet{Wilkinson15} find -0.15 dex/$R_e$ gradients for early type galaxies and flat metallicity gradients for late type galaxies. 
+
+
+\citet{Kasparova14} present one of the most in depth observational studies of Malin~2.
+Mass-modeling the system, they find that a huge isothermal core with $r_c=27.3$ kpc best fits the dynamics.
+XXX--address how our new interpretation of the formation of the system as a merger remnant could help solve the discrepancy with that huge isothermal core. 
+XXX--rather than being an outlier late-type disk, they are probing the outskirts of an early-type galaxy, where wonky dark matter profiles are common xxx-cite Amy's paper, etc.
+\citet{Kasparova14} also measure gas metallicities and find the metallicity drops from solar in the center of the system to half-solar at $r=30$\ kpc.
+It is probably foolish to directly compare gas and stellar metallicities, but it is interesting that the gas metallicity gradient appears to be much lower than the stellar gradient.
+This is probably consistent with a low metallicity gas-rich galaxy merging with an elliptical system that has much higher stellar metallicity, although a detailed simulation would be helpful in confirming what the final expected gas metallicity gradient should be.
+
+
+\citet{Hagen16} present the discovery of a GLSB system around UGC~1382.
+As in this work, they find the best explanation of the extended disk as being the remnants of an accreted dwarf galaxy similar to the simulations of \citet{Pen06}. 
+
+If these systems do prove to be ellipticals with accreted high angular momentum disks, they represent an amazing opportunity to probe the dark matter halo properties of elliptical systems to very large radii. 
+
+
+\section{Conclusions}\label{sec:conclusions}
+
+We have observed two giant low surface brightness galaxies with the Mitchell Spectrograph IFS.
+We find the systems are best explained as massive elliptical galaxies which have managed to accrete stars and gas into a large disk.
+We find the inner bulge is similar to elliptical galaxies found in SDSS.
+The extended galaxy stars have disk-like velocity fields, are dominated by old stars, but do show signs of ongoing star formation. The stars also show a sharp metallicity transition, consistent with the disk forming independently of the bulge. The \HI\ mass of the disk is also consistent with coming from a low-mass accreted galaxy.
+
+We are currently observing higher spatial resolution IFS data with Gemini (GN-2015A-Q-75) of the central region of these galaxies to confirm they are typical early-type galaxies and constrain a more sophisticated dynamical model of the system.
+
+%--------------------------------------
+\acknowledgments
+Thanks to Dave Doss and the staff at McDonald Observatory for their help on these observing runs. Thanks to Dmitry Bizyaev for stimulating conversations about GLSBs. Thanks to Lauren MacArthur for discussions on stellar metallicity gradients. We thank the anonymous referee for a very thorough and amazingly prompt report which improved the paper.
+
+VPD is supported by STFC Consolidated grant \#ST/M000877/1.
+
+This paper includes data taken at The McDonald Observatory of The University of Texas at Austin.
+
+This research made use of the ``K-corrections calculator'' service available at http://kcor.sai.msu.ru/
+
+GANDALF was developed by the SAURON team and is available from the SAURON website (www.strw.leidenuniv.nl/sauron). See also Sarzi et al. (2006, MNRAS, 366, 1151) for details.
+
+Funding for SDSS-III has been provided by the Alfred P. Sloan Foundation, the Participating Institutions, the National Science Foundation, and the U.S. Department of Energy Office of Science. The SDSS-III web site is http://www.sdss3.org/.
+
+SDSS-III is managed by the Astrophysical Research Consortium for the Participating Institutions of the SDSS-III Collaboration including the University of Arizona, the Brazilian Participation Group, Brookhaven National Laboratory, University of Cambridge, Carnegie Mellon University, University of Florida, the French Participation Group, the German Participation Group, Harvard University, the Instituto de Astrofisica de Canarias, the Michigan State/Notre Dame/JINA Participation Group, Johns Hopkins University, Lawrence Berkeley National Laboratory, Max Planck Institute for Astrophysics, Max Planck Institute for Extraterrestrial Physics, New Mexico State University, New York University, Ohio State University, Pennsylvania State University, University of Portsmouth, Princeton University, the Spanish Participation Group, University of Tokyo, University of Utah, Vanderbilt University, University of Virginia, University of Washington, and Yale University.
+
+
+\bibliography{ms}
+
+
+\begin{figure}
+\epsscale{.33}
+\plotone{sdssbinned_Malin2.eps}\plotone{Malin2mu.eps}\plotone{Malin2profile_fit.eps}
+\plotone{sdssbinned_UGC06614.eps}\plotone{UGC06614mu.eps}\plotone{UGC06614profile_fit.eps}
+\epsscale{1}
+\caption{Left:  SDSS images of Malin~2 and UGC 6614.
+Middle:  Images made with the Mitchell Spectrograph datacube synthetic fiber magnitudes.
+Right:  Exponential fits to the fiber magnitudes.
+Red points show fibers that were clipped while the solid lines show the best-fits.
+\label{galaxy_fibers} }
+\end{figure}
+
+
+
+\begin{figure*}
+\epsscale{0.25}
+\plotone{dataMalin2.eps}\plotone{modelMalin2.eps}\plotone{data_modelMalin2.eps} \\
+\plotone{databinned_Malin2.eps}\plotone{modelbinned_Malin2.eps}\plotone{data_modelbinned_Malin2.eps}
+%\epsscale{.5}
+\epsscale{1}
+\caption{Upper panels show kinematics from individual fibers, lower panels show the results after fibers have been binned into triples.
+Left:  Stellar velocities measured with pPXF \citep{Cappellari04}. Middle:  Best fitting tilted ring model from kinemetry \citep{Krajn06}. Right: Best fit residuals.
+\label{malin_kinem_fibers}}
+\end{figure*}
+
+\begin{figure*}
+\epsscale{0.25}
+\plotone{dataUGC06614.eps}\plotone{modelUGC06614.eps}\plotone{data_modelUGC06614.eps} \\
+\plotone{databinned_UGC06614.eps}\plotone{modelbinned_UGC06614.eps}\plotone{data_modelbinned_UGC06614.eps}
+\epsscale{1}
+\caption{Upper panels show kinematics from individual fibers, lower panels show the results after fibers have been binned into triples.
+Left:  Stellar velocities measured with pPXF \citep{Cappellari04}. Middle:  Best fitting tilted ring model from kinemetry \citep{Krajn06}. Right: Best fit residuals.
+\label{ugc_kinem_fibers}}
+\end{figure*}
+
+
+\begin{figure*}
+\epsscale{1}
+\plottwo{kinembinned_Malin2.eps}{kinem_HI_binned_Malin2.eps}
+\plottwo{kinembinned_UGC06614.eps}{kinem_HI_binned_UGC06614.eps}
+\caption{Rotation curves extracted from the best fitting models in Figures~\ref{malin_kinem_fibers} and~\ref{ugc_kinem_fibers}.
+The dashed curves show the expected stellar mass contribution to the rotation curve.
+Vertical lines mark $R_e$ and $5R_e$.
+Right panel includes \HI\ data from \citet{Pickering97}.
+\label{gal_kinem}}
+\end{figure*}
+
+
+\begin{figure}
+\plottwo{Malin2bin_map.eps}{Malin2binned_spec.eps}
+\plottwo{UGC06614bin_map.eps}{UGC06614binned_spec.eps}
+\caption{Left:  Maps of which fibers were binned together for star formation history measurements.
+Right:  Resulting binned spectra, residuals from the bright skyline at 5577\AA\ have been masked.
+For both galaxies, the inner bins show strong Mg, Fe, and Ca absorption features, while the outer bins have \hb\ and \ion{O}{3} emission lines. \label{gal_binmap}}
+\end{figure}
+
+
+\begin{figure}
+\plottwo{Malin2_chibar_sfr.eps}{UGC06614_chibar_sfr.eps}
+\caption{ Best fitting star formation histories.
+For each bin, the SFH is normalized by the peak at each radius.
+Error bars are based on $\Delta\chi^2=100$ or the best fitting 4 models, whichever provides more points.
+The oldest age bin dominates at all radii.
+\label{sfh_gals} }
+\end{figure}
+
+
+\begin{figure}
+\plottwo{Malin2_chibar_z.eps}{UGC06614_chibar_z.eps}
+\caption{Best fitting stellar metallicities.
+ Dashed line shows the maximum model metallicity used in the models (minimum is below the y range limit).
+Error bars are as in Figure~\ref{sfh_gals}.
+\label{metal_gals}}
+\end{figure}
+
+
+\clearpage
+
+\appendix
+\section{SDSS SQL Queries} \label{SQL}
+To build our sample of comparison galaxies from SDSS, we used the CasJobs interface to query the SDSS DR10 database.
+
+
+the galaxy CMD contours in Figure~\ref{elliptical_relations} were obtained via:
+%gal_cmd_2
+\begin{verbatim}
+select 
+objid,ra,dec,
+dered_u,dered_g,dered_r,dered_i,dered_z,
+z,4.27E+3*z as d_hubble_mpc,
+dered_u-dered_r as u_minus_r,
+dered_r-5*log10(4.27E+8*z) as abs_mag_r 
+
+from specphotoall
+where
+class='GALAXY'
+AND dered_r between 13.5 and 17.7
+AND ((flags & 0x10000000) != 0)
+AND ((flags & 0x8100000c00a0) = 0)
+AND (((flags & 0x400000000000) = 0) or (psfmagerr_g <= 0.2))
+AND (((flags & 0x100000000000) = 0) or (flags & 0x1000) = 0)
+AND zerr < 0.05
+AND z BETWEEN 0.01 and 0.085
+AND dered_r - 5*log10(4.27E+08*z) BETWEEN -23.5 and -15.5
+\end{verbatim}
+
+
+The fundamental plane contours in Figure~\ref{elliptical_relations} was computed from:
+%fund_2
+\begin{verbatim}
+select
+ph.objid, sp.z, sp.velDisp, sp.velDisperr, deVMag_g,deVMag_r, ph.deVRad_r, 
+ph.r,ph.dered_r, ph.extinction_r, ph.extinction_g, ph.deVAB_r,  gs.best_model_z, 
+gse.oh_p50, gse.lgm_tot_p50, gs.model_chisq_040, gs.model_chisq_080, 
+gs.model_chisq_170, gs.model_chisq_400, zoo.spiral, zoo.elliptical, 
+zoo.uncertain, zoo.p_el, zoo.p_cw,zoo.p_acw 
+
+from specobj as sp, photoobj as ph, galSpecIndx as gs, 
+galSpecExtra as gse, zoospec as zoo
+
+where
+sp.bestObjID = ph.objID and gs.specObjID = sp.specObjID 
+and gse.specObjID = sp.specObjID 
+and zoo.objid =  ph.objID 
+
+AND sp.class='GALAXY'
+AND sp.velDisp != 0
+AND sp.z BETWEEN 0.01 and 0.085
+AND sp.zerr < 0.05
+AND ph.dered_r between 13.5 and 17.7
+AND ph.dered_u-ph.dered_r > 2.1
+AND ph.lnLDeV_r-ph.lnLExp_r > 0.29559
+AND ph.petroR90_i/ph.petroR50_i > 2.5
+AND ((ph.flags & 0x10000000) != 0)
+AND ((ph.flags & 0x8100000c00a0) = 0)
+AND (((ph.flags & 0x400000000000) = 0) or (ph.psfmagerr_g <= 0.2))
+AND (((ph.flags & 0x100000000000) = 0) or (ph.flags & 0x1000) = 0)
+\end{verbatim}
+
+
+
+
+Finally, the mass-metallicity relation in Figure~\ref{elliptical_relations} was obtained via:
+%lick_combo_v4
+\begin{verbatim}
+select 
+ph.objid,sp.velDisp, gse.lgm_tot_p50, gs.lick_hd_a_sub, gs.lick_hd_f_sub, 
+gs.lick_cn1_sub, gs.lick_cn2_sub, gs.lick_Ca4227_sub, gs.lick_G4300_sub, 
+gs.lick_hg_a_sub, gs.lick_hg_f_sub, gs.lick_fe4383_sub, gs.lick_ca4455_sub, 
+gs.lick_fe4531_sub, gs.lick_c4668_sub, gs.lick_hb_sub, gs.lick_fe5015_sub, 
+gs.lick_mg1_sub, gs.lick_mg2_sub, gs.lick_mgb_sub, gs.lick_Fe5270_sub, 
+gs.lick_Fe5335_sub, gs.lick_Fe5406_sub, gs.lick_Fe5709_sub, gs.lick_Fe5782_sub, 
+gs.lick_NaD_sub, gs.lick_TiO1_sub, gs.lick_TiO2_sub 
+
+from specobj as sp, photoobj as ph, galSpecIndx as gs, galSpecExtra as gse
+
+where
+sp.bestObjID = ph.objID and gs.specObjID = sp.specObjID 
+and gse.specObjID = sp.specObjID
+AND sp.class='GALAXY'
+AND sp.velDisp != 0
+AND sp.z BETWEEN 0.01 and 0.085
+AND sp.zerr < 0.05
+AND ph.dered_r between 13.5 and 17.7
+AND ph.dered_u-ph.dered_r > 2.1
+AND ph.lnLDeV_r-ph.lnLExp_r > 0.29559
+AND ph.petroR90_i/ph.petroR50_i > 2.5
+AND ((ph.flags & 0x10000000) != 0)
+AND ((ph.flags & 0x8100000c00a0) = 0)
+AND (((ph.flags & 0x400000000000) = 0) or (ph.psfmagerr_g <= 0.2))
+AND (((ph.flags & 0x100000000000) = 0) or (ph.flags & 0x1000) = 0)
+\end{verbatim}
+
+
+\end{document}
+
+
+% LocalWords:  Debattista Horrocks Lancashire RCUK Malin Stanonik Spavone Lelli
+% LocalWords:  Bothun GLSB Das Mapelli Weij Loebman SungWon Kwak Scd Sd
+% LocalWords:  Schiminovich Iodice Belokurov Fairchild RMS pPXF Cappellari th
+% LocalWords:  GANDALF Sarzi CosmoloPy Bernardi GLSBs DeBlok Verheijen Yoachim
+% LocalWords:  SEDs Brookhaven Instituto Astrofisica Canarias Notre JINA DM
+% LocalWords:  IFS UGC HSB SAURON ellipticals Spitzer IC Galaz Myr
+% LocalWords:  kpc HIPASS CCD metallicity MANGA SDSS arcsec lensing IRAF
+% LocalWords:  Spectrograph spectrograph IDL longslit photometric FWHM SSP mis
+% LocalWords:  dispersions Balmer decrement fiducia redshift Chabrier
+% LocalWords:  Faber redshifts NGC kinemetry photometry anisotropy Gyr SFH
+% LocalWords:  metallicities colliders rotators et al MNRAS de datacube Ppxf
+% LocalWords:  dashed CDM Kasparova LSB Dutton Raskutti Sa Morganti
+%%  LocalWords:  Emonts Weijmans Ibata McConnachie Schweizer Magain
+%%  LocalWords:  Oosterloo baryonic Buote GALEX Salim Kelson outlier
+%%  LocalWords:  Bruzual Ahn Willett SQL Chilingarian Saulder Swaters
+%%  LocalWords:  Krajn GN Kuntschner situ indices Emsell Capp CasJobs
+%%  LocalWords:  Schmitz circ accrete jabref CMD collisional GLSB's
+%%  LocalWords:  impactor Conroy brightnesses Malmquist dex Hagen
+%%  LocalWords:  Dmitry isothermal
