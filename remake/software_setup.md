@@ -14,3 +14,12 @@ git clone https://github.com/cconroy20/fsps.git $SPS_HOME
 conda install emcee
 pip install dynesty
 
+
+---------------
+
+OK, I'm leaning more towards bagpipes now. Let's see if we can install that
+
+conda activate glsb
+pip install bagpipes
+
+uuugh, need to update macports. Which needs new xcode. Fantastic.
