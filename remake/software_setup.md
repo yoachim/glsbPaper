@@ -34,3 +34,25 @@ make
 sudo make install
 
 Looks like that installs at: /usr/local/bin/
+
+
+-----------
+
+Need to do again for new M2 laptop. Probably going to try homebrew this time.
+
+conda activate glsb
+pip install bagpipes
+
+brew install gcc
+brew install cmake
+brew install open-mpi
+pip install mpi4py
+conda install -c conda-forge jupyter
+
+export DYLD_LIBRARY_PATH="/opt/homebrew/lib"
+
+cmake -DCMAKE_C_COMPILER=/opt/homebrew/bin/gcc-13 -DCMAKE_Fortran_COMPILER=/opt/homebrew/bin/gfortran -DCMAKE_CXX_COMPILER=/opt/homebrew/bin/g++-13 ..
+
+make
+sudo make install
+
