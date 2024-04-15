@@ -1,7 +1,7 @@
 import numpy as np
-import matplotlib.pylab as plt
 from scipy.io import readsav
 import bagpipes as pipes
+import argparse
 
 
 def load_malin2(ID):
@@ -12,13 +12,38 @@ def load_malin2(ID):
     rough_spec = load_malin2.f1['binned_spec'][ID, :] + 0 
     rough_err = load_malin2.f1['binned_err'][ID, :] + 0
     # Rough cut to chop off bad pixels
+    
     bp = np.where((rough_spec < 0) | (rough_spec > 4))[0]
     
     rough_spec[bp] = 0
     rough_err[bp] = 1e6
+    wave = np.exp(load_malin2.f1['wave'])
+    bp = np.where((wave > 5565) & (wave < 5590))
     
-    spectrum = np.vstack([np.exp(load_malin2.f1['wave']), rough_spec*1e-18, rough_err*1e-18])
+    rough_spec[bp] = 0
+    rough_err[bp] = 1e6
     
+    bp = np.where(wave > 5780)
+    rough_spec[bp] = 0
+    rough_err[bp] = 1e6
+    
+    if ID == 5:
+        bp = np.where(wave > 5770)
+        rough_spec[bp] = 0
+        rough_err[bp] = 1e6
+        
+        bp = np.where(wave < 3570)
+        rough_spec[bp] = 0
+        rough_err[bp] = 1e6
+    
+    rough_err[0:5] = 1e6
+    
+    good = np.where(rough_err < 1e6)
+    
+    spectrum = np.vstack([np.exp(load_malin2.f1['wave'])[good],
+                         rough_spec[good]*1e-18,
+                         rough_err[good]*1e-18])
+
     return spectrum.T
 
 
@@ -35,7 +60,10 @@ def load_ugc(ID):
     rough_spec[bp] = 0
     rough_err[bp] = 1e6
     
-    spectrum = np.vstack([np.exp(load_ugc.f1['wave']), rough_spec*1e-18, rough_err*1e-18])
+    wave = np.exp(load_ugc.f1['wave'])
+    good = np.where((3900 < wave) & (wave < 5500) & (rough_err < 1e6) & (rough_spec > 0))[0]
+    
+    spectrum = np.vstack([np.exp(load_ugc.f1['wave'])[good], rough_spec[good]*1e-18, rough_err[good]*1e-18])
     
     return spectrum.T
 
@@ -112,20 +140,27 @@ def setting():
 
 if __name__ == "__main__":
 
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--ugc",
+        dest="ugc",
+        default=False,
+        action="store_true",
+    )
+    parser.add_argument("--id", type=int, default=0)
+    args = parser.parse_args()
+
+    ID_number = args.id
+    ugc = args.ugc
+
     fit_instructions = setting()
 
-    ID_number = 0
+    if ugc:
+        galaxy = pipes.galaxy(ID_number, load_ugc, photometry_exists=False)
+        fit = pipes.fit(galaxy, fit_instructions, run="ugc_%i" % ID_number)
 
+    else:
+        galaxy = pipes.galaxy(ID_number, load_malin2, photometry_exists=False)
+        fit = pipes.fit(galaxy, fit_instructions, run="malin2_%i" % ID_number)
 
-
-
-    galaxy = pipes.galaxy(ID_number, load_malin2, photometry_exists=False)
-    fit = pipes.fit(galaxy, fit_instructions, run="malin2_%i" % ID_number)
     fit.fit(verbose=True)
-
-
-    galaxy = pipes.galaxy(ID_number, load_ugc, photometry_exists=False)
-    fit = pipes.fit(galaxy, fit_instructions, run="ugc_%i" % ID_number)
-    fit.fit(verbose=True)
-
-
