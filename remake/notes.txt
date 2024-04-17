@@ -1,0 +1,4 @@
+2024-04-17
+
+Seems like the fits are converging to very high metallicity at larger radii. I guess I can try using different priors at different radii. This seems a little bit like p-hacking, but I do have my previous fits (and things like the SDSS spectra and colors), so it's not totally cheating. Shame that bagpipes doesn't just converge out of the box to the correct solution.
+
