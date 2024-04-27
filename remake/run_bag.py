@@ -69,14 +69,16 @@ def load_ugc(ID):
 
 
 def setting():
+
+    # mostly from https://github.com/ACCarnall/bagpipes/blob/master/examples/Example%205%20-%20Fitting%20spectroscopic%20data.ipynb
     dblplaw = {}                        
     dblplaw["tau"] = (0., 15.)            
     dblplaw["alpha"] = (0.01, 1000.)
     dblplaw["beta"] = (0.01, 1000.)
     dblplaw["alpha_prior"] = "log_10"
     dblplaw["beta_prior"] = "log_10"
-    dblplaw["massformed"] = (1., 15.)
-    dblplaw["metallicity"] = (0.1, 2.)
+    dblplaw["massformed"] = (.1, 15.)
+    dblplaw["metallicity"] = (0.05, 5.)
     dblplaw["metallicity_prior"] = "log_10"
 
     nebular = {}
