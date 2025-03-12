@@ -68,17 +68,24 @@ def load_ugc(ID):
     return spectrum.T
 
 
-def setting():
+def setting(outer=False):
 
     # mostly from https://github.com/ACCarnall/bagpipes/blob/master/examples/Example%205%20-%20Fitting%20spectroscopic%20data.ipynb
-    dblplaw = {}                        
-    dblplaw["tau"] = (0., 15.)            
+    dblplaw = {} 
+    if outer:                       
+        dblplaw["tau"] = (6., 15.)
+    else:
+        dblplaw["tau"] = (0., 5.)      
     dblplaw["alpha"] = (0.01, 1000.)
     dblplaw["beta"] = (0.01, 1000.)
     dblplaw["alpha_prior"] = "log_10"
     dblplaw["beta_prior"] = "log_10"
     dblplaw["massformed"] = (.1, 15.)
-    dblplaw["metallicity"] = (0.05, 5.)
+    if outer:
+        dblplaw["metallicity"] = (0.05, .5)
+    else:
+        dblplaw["metallicity"] = (1.1, 5.)
+
     dblplaw["metallicity_prior"] = "log_10"
 
     nebular = {}
@@ -130,6 +137,8 @@ def setting():
     mlpoly = {}
     mlpoly["type"] = "polynomial_max_like"
     mlpoly["order"] = 2
+    # Try to add the mlpoly
+    fit_instructions["mlpoly"] = mlpoly
 
     noise = {}
     noise["type"] = "white_scaled"
@@ -155,7 +164,12 @@ if __name__ == "__main__":
     ID_number = args.id
     ugc = args.ugc
 
-    fit_instructions = setting()
+    if ID_number > 2:
+        outer = True
+    else:
+        outer = False
+
+    fit_instructions = setting(outer=outer)
 
     if ugc:
         galaxy = pipes.galaxy(ID_number, load_ugc, photometry_exists=False)
@@ -165,4 +179,4 @@ if __name__ == "__main__":
         galaxy = pipes.galaxy(ID_number, load_malin2, photometry_exists=False)
         fit = pipes.fit(galaxy, fit_instructions, run="malin2_%i" % ID_number)
 
-    fit.fit(verbose=True)
+    fit.fit(verbose=True, sampler="nautilus")

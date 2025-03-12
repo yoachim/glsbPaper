@@ -2,3 +2,59 @@
 
 Seems like the fits are converging to very high metallicity at larger radii. I guess I can try using different priors at different radii. This seems a little bit like p-hacking, but I do have my previous fits (and things like the SDSS spectra and colors), so it's not totally cheating. Shame that bagpipes doesn't just converge out of the box to the correct solution.
 
+2025-03-11
+
+moving the pipes dir to 24_pipes
+
+Fiddling with the metallicity prior for outer bins.
+
+
+also going to try to make conda env glsb12 to use python 12 and the nautilus sampler.
+
+conda create -n glsb12 python=3.12
+conda activate glsb12
+pip install bagpipes
+conda install -c conda-forge notebook
+
+
+
+trying naut with: python run_bag.py --id 5 :
+Status    | Bounds | Ellipses | Networks | Calls    | f_live | N_eff | log Z
+Finished  | 76     | 2        | 4        | 189700   | N/A    | 5764  | -255.83
+
+Completed in 2410.8 seconds.
+
+Parameter                          Posterior percentiles
+                                16th       50th       84th
+----------------------------------------------------------
+calib:0                        0.974      1.079      1.182
+calib:1                        0.137      0.170      0.218
+calib:2                       -0.069     -0.062     -0.055
+dblplaw:alpha                  9.654     11.469     13.158
+dblplaw:beta                   1.731      3.986      6.705
+dblplaw:massformed             7.781      7.881      7.993
+dblplaw:metallicity            1.117      1.157      1.232
+dblplaw:tau                    7.139      7.856      8.492
+dust:Av                        0.216      0.380      0.571
+dust:n                         0.462      0.617      0.792
+noise:scaling                  1.000      1.001      1.003
+redshift                       0.047      0.047      0.047
+veldisp                      272.423    281.370    290.232
+
+
+Parameter                          Posterior percentiles
+                                16th       50th       84th
+----------------------------------------------------------
+calib:0                        0.761      0.807      0.857
+calib:1                        0.425      0.454      0.483
+calib:2                       -0.046     -0.040     -0.033
+dblplaw:alpha                  1.986      2.706      3.487
+dblplaw:beta                   0.019      0.052      0.153
+dblplaw:massformed             7.975      8.017      8.056
+dblplaw:metallicity            0.484      0.493      0.498
+dblplaw:tau                    4.337      6.556      8.099
+dust:Av                        1.222      1.280      1.341
+dust:n                         0.692      0.784      0.881
+noise:scaling                  4.210      4.300      4.399
+redshift                       0.047      0.047      0.047
+veldisp                      215.657    223.589    231.128
