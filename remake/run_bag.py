@@ -71,22 +71,29 @@ def load_ugc(ID):
 def setting(outer=False):
 
     # mostly from https://github.com/ACCarnall/bagpipes/blob/master/examples/Example%205%20-%20Fitting%20spectroscopic%20data.ipynb
-    dblplaw = {} 
-    if outer:                       
-        dblplaw["tau"] = (6., 15.)
-    else:
-        dblplaw["tau"] = (0., 5.)      
-    dblplaw["alpha"] = (0.01, 1000.)
-    dblplaw["beta"] = (0.01, 1000.)
-    dblplaw["alpha_prior"] = "log_10"
-    dblplaw["beta_prior"] = "log_10"
-    dblplaw["massformed"] = (.1, 15.)
-    if outer:
-        dblplaw["metallicity"] = (0.05, .5)
-    else:
-        dblplaw["metallicity"] = (1.1, 5.)
+    # dblplaw = {} 
+    # #if outer:                       
+    # #    dblplaw["tau"] = (6., 15.)
+    # #else:
+    # #    dblplaw["tau"] = (0., 5.)
+    # dblplaw["tau"] = (0., 15.) 
+    # dblplaw["alpha"] = (0.01, 1000.)
+    # dblplaw["beta"] = (0.01, 1000.)
+    # dblplaw["alpha_prior"] = "log_10"
+    # dblplaw["beta_prior"] = "log_10"
+    # dblplaw["massformed"] = (.1, 15.)
+    # if outer:
+    #     dblplaw["metallicity"] = (0.05, 1)
+    # else:
+    #     dblplaw["metallicity"] = (1.1, 5.)
 
-    dblplaw["metallicity_prior"] = "log_10"
+    # dblplaw["metallicity_prior"] = "log_10"
+    exponential = {}
+    exponential["age"] = (3., 9.)
+    exponential["tau"] = (0., 10.)
+    exponential["metallicity"] = (0.01, 5)
+    exponential["metallicity_prior"] = "log_10"
+    exponential["massformed"] = (0., 13.)
 
     nebular = {}
     nebular["logU"] = -3.
@@ -106,7 +113,8 @@ def setting(outer=False):
     #fit_instructions["redshift_prior"] = "Gaussian"
     #fit_instructions["redshift_prior_mu"] = 0.9
     #fit_instructions["redshift_prior_sigma"] = 0.05
-    fit_instructions["dblplaw"] = dblplaw 
+    # fit_instructions["dblplaw"] = dblplaw 
+    fit_instructions["exponential"] = exponential
     fit_instructions["nebular"] = nebular
     fit_instructions["dust"] = dust
 
